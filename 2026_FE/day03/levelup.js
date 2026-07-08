@@ -10,43 +10,49 @@
     1초~59초 = 1 ~ 59 
 */
 
-let second = Number(prompt("초 입력"));
-
-let hour =
-  second < 0
-    ? null
-    : parseInt(second / 3600) < 0 //0시간이하 -> 00
-      ? "00"
-      : parseInt(second / 3600) >= 100 // 100시간 이상
-        ? null
-        : parseInt(second / 3600) > 9 // 1시간 이상이면서 두자리
-          ? `${parseInt(second / 3600)}` //두자리
-          : `0${parseInt(second / 3600)}`; //한자리
-
-/* 
-    second /60 (분) /60 (시) 에서 ParseInt로 시간 부분만 
-    
-     ## 99시간 이하여야한다. + 
+/*
+    ### 계산식 다시 처음부터 수정 필요 ###
+    시간 / 분 / 초
 */
-let minute =
-  second < 0
-    ? null
-    : parseInt((second % 3600) % 60) <= 0
-      ? "00" //0분이하
-      : parseInt((second % 3600) % 60) > 9
-        ? `${parseInt((second % 3600) % 60)}`
-        : `0${parseInt((second % 3600) % 60)}`;
 
-let second2 =
-  second < 0
-    ? null
-    : parseInt(second % 60) % 60 <= 0
-      ? "00"
-      : parseInt(second % 60) % 60 > 9
-        ? `${parseInt(second % 60) % 60}`
-        : `0${parseInt(second % 60) % 60}`;
+// let second = Number(prompt("초 입력"));
 
-console.log(`${hour}:${minute}:${second2}`);
+// let hour =
+//   second < 0
+//     ? null
+//     : parseInt(second / 3600) < 0 //0시간이하 -> 00
+//       ? "00"
+//       : parseInt(second / 3600) >= 100 // 100시간 이상
+//         ? null
+//         : parseInt(second / 3600) > 9 // 1시간 이상이면서 두자리
+//           ? `${parseInt(second / 3600)}` //두자리
+//           : `0${parseInt(second / 3600)}`; //한자리
+
+// /*
+//     second /60 (분) /60 (시) 에서 ParseInt로 시간 부분만
+
+//      ## 99시간 이하여야한다. +
+// */
+// let minute =
+//   second < 0
+//     ? null
+//     : parseInt((second % 3600) % 60) <= 0
+//       ? "00" //0분이하
+//       : parseInt((second % 3600) % 60) > 9
+//         ? `${parseInt((second % 3600) % 60)}`
+//         : `0${parseInt((second % 3600) % 60)}`;
+
+// let second2 =
+//   second < 0
+//     ? null
+//     : parseInt(second % 60) % 60 <= 0
+//       ? "00"
+//       : parseInt(second % 60) % 60 > 9
+//         ? `${parseInt(second % 60) % 60}`
+//         : `0${parseInt(second % 60) % 60}`;
+
+// console.log(`${hour}:${minute}:${second2}`);
+
 /* 
     1분이상 59분이하
     60분이상 => 1시간
