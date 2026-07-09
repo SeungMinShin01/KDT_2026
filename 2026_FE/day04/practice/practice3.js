@@ -17,27 +17,27 @@
     없으면 false 반환
 */
 
-// let fruitList = ["사과", "바나나"];
-// let newFruit = prompt("추가할 과일 입력");
+let fruitList = ["사과", "바나나"];
+let newFruit = prompt("추가할 과일 입력");
 
-// if (fruitList.includes(newFruit)) console.log("이미 존재하는 과일입니다ush.");
-// else {
-//   fruitList.push(newFruit);
-//   console.log(fruitList);
-// }
+if (fruitList.includes(newFruit)) console.log("이미 존재하는 과일입니다ush.");
+else {
+  fruitList.push(newFruit);
+  console.log(fruitList);
+}
 
-// 문제 2: 성별에 따른 색상 지정
+// 문제 2: 성별에 따른 색상 지정s
 // 주민등록번호 13자리를 문자열로 입력받습니다.
 // 성별을 나타내는 7번째 숫자가 '1' 또는 '3'이면 'blue'를,
 // '2' 또는 '4'이면 'red'를 출력하는 프로그램을 작성하시오.
 
-// let 주민등록번호 = prompt("주민등록번호 13자리 입력");
-// let num4 = 주민등록번호.charAt(6);
+let 주민등록번호 = prompt("주민등록번호 13자리 입력");
+let num4 = 주민등록번호.charAt(6);
 
-// console.log(num5);
+console.log(num5);
 
-// if (num5 == "1" || num5 == "3") console.log("blue");
-// else if (num5 == "2" || num5 == "4") console.log("red");
+if (num5 == "1" || num5 == "3") console.log("blue");
+else if (num5 == "2" || num5 == "4") console.log("red");
 
 /*
     charAt() 함수 – 인수로 전달된 문자열의 인덱스 위치에 해당하는 문자를 반환하는 함수
@@ -87,18 +87,18 @@
 // 10,000원 이상 30,000원 미만: 1% 할인
 // 10,000원 미만: 할인 없음
 
-// let totalPrice = Number(prompt("총 구매 금액 입력"));
+let totalPrice = Number(prompt("총 구매 금액 입력"));
 
-// if (totalPrice >= 50000) {
-//   totalPrice *= 0.9; //10% 할인
-//   console.log(`총 금액은 ${totalPrice}원 (할인 10%)`);
-// } else if (totalPrice >= 30000 && totalPrice < 50000) {
-//   totalPrice *= 0.95; //5% 할인
-//   console.log(`총 금액은 ${totalPrice}원 (할인 5%)`);
-// } else if (totalPrice >= 10000 && totalPrice < 30000) {
-//   totalPrice *= 0.99; //1% 할인
-//   console.log(`총 금액은 ${totalPrice}원 (할인 1%)`);
-// } else console.log(`총 금액은 ${totalPrice}원 (할인 없음)`); //할인 없음
+if (totalPrice >= 50000) {
+  totalPrice *= 0.9; //10% 할인
+  console.log(`총 금액은 ${totalPrice}원 (할인 10%)`);
+} else if (totalPrice >= 30000 && totalPrice < 50000) {
+  totalPrice *= 0.95; //5% 할인
+  console.log(`총 금액은 ${totalPrice}원 (할인 5%)`);
+} else if (totalPrice >= 10000 && totalPrice < 30000) {
+  totalPrice *= 0.99; //1% 할인
+  console.log(`총 금액은 ${totalPrice}원 (할인 1%)`);
+} else console.log(`총 금액은 ${totalPrice}원 (할인 없음)`); //할인 없음
 
 // 문제 4: 월(Month)에 따른 계절 판별
 // 1부터 12 사이의 월(Month)을 숫자로 입력받아, 해당하는 계절을 출력하는 프로그램을 작성하시오.
@@ -108,24 +108,24 @@
 // 겨울: 12, 1, 2월
 // 만약 1~12 이외의 숫자를 입력하면 '잘못된 월입니다.'를 출력하세요.
 
-// let month = prompt("월 입력");
+let month = prompt("월 입력");
 
-// if (month == "3" || month == "4" || month == "5") console.log("봄");
-// else if (month == "6" || month == "7" || month == "8") console.log("여름");
-// else if (month == "9" || month == "10" || month == "11") console.log("가을");
-// else if (month == "12" || month == "1" || month == "2") console.log("겨울");
-// else console.log("잘못된 월입니다.");
+if (month == "3" || month == "4" || month == "5") console.log("봄");
+else if (month == "6" || month == "7" || month == "8") console.log("여름");
+else if (month == "9" || month == "10" || month == "11") console.log("가을");
+else if (month == "12" || month == "1" || month == "2") console.log("겨울");
+else console.log("잘못된 월입니다.");
 
 // 문제 5: 세 수 중 가장 큰 수 찾기
 // 서로 다른 세 개의 정수를 입력받아, 가장 큰 수를 출력하는 프로그램을 작성하시오.
 
-// let num6 = Number(prompt("숫자1 입력"));
-// let num7 = Number(prompt("숫자2 입력"));
-// let num8 = Number(prompt("숫자3 입력"));
+let num6 = Number(prompt("숫자1 입력"));
+let num7 = Number(prompt("숫자2 입력"));
+let num8 = Number(prompt("숫자3 입력"));
 
-// if (num6 > num7 && num6 > num8) console.log(`가장 큰 수는 숫자: ${num6}`);
-// else if (num7 > num6 && num7 > num8) console.log(`가장 큰 수는 숫자: ${num7}`);
-// else console.log(`가장 큰 수는 숫자: ${num8}`);
+if (num6 > num7 && num6 > num8) console.log(`가장 큰 수는 숫자: ${num6}`);
+else if (num7 > num6 && num7 > num8) console.log(`가장 큰 수는 숫자: ${num7}`);
+else console.log(`가장 큰 수는 숫자: ${num8}`);
 
 // 문제 6: 윤년 판별기
 // 사용자로부터 연도(year)를 입력받아 해당 연도가 윤년인지 평년인지 판별하는 프로그램을 작성하시오.
@@ -134,30 +134,30 @@
 // 또는 연도가 400의 배수일 때
 // 출력 예시: '2024년은 윤년입니다.' 또는 '2023년은 평년입니다.'
 
-// let year = Number(prompt("연도 입력(숫자만)"));
+let year = Number(prompt("연도 입력(숫자만)"));
 
-// if ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0)
-//   console.log(`${year}년은 윤년입니다.`);
-// else console.log(`${year}년은 평년입니다.`);
+if ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0)
+  console.log(`${year}년은 윤년입니다.`);
+else console.log(`${year}년은 평년입니다.`);
 
 // 문제 7: 세 수 오름차순 정렬
 // 서로 다른 세 개의 정수를 입력받아, 오름차순(작은 수부터 큰 수 순서)으로 정렬하여 출력하는 프로그램을 작성하시오.
 // 예시: 17, 4, 8 입력 시 4, 8, 17 출력
 
-// let number1 = Number(prompt("정수1 입력"));
-// let number2 = Number(prompt("정수2 입력"));
-// let number3 = Number(prompt("정수3 입력"));
+let number1 = Number(prompt("정수1 입력"));
+let number2 = Number(prompt("정수2 입력"));
+let number3 = Number(prompt("정수3 입력"));
 
-// if (number1 > number2 && number1 > number3) {
-//   if (number2 > number3) console.log(`${number1}, ${number2}, ${number3} `);
-//   else console.log(`${number1}, ${number3}, ${number2} `);
-// } else if (number2 > number1 && number2 > number3) {
-//   if (number1 > number3) console.log(`${number2}, ${number1}, ${number3} `);
-//   else console.log(`${number2}, ${number3}, ${number1} `);
-// } else if (number3 > number1 && number3 > number2) {
-//   if (number1 > number2) console.log(`${number3}, ${number1}, ${number2} `);
-//   else console.log(`${number3}, ${number2}, ${number1} `);
-// }
+if (number1 > number2 && number1 > number3) {
+  if (number2 > number3) console.log(`${number1}, ${number2}, ${number3} `);
+  else console.log(`${number1}, ${number3}, ${number2} `);
+} else if (number2 > number1 && number2 > number3) {
+  if (number1 > number3) console.log(`${number2}, ${number1}, ${number3} `);
+  else console.log(`${number2}, ${number3}, ${number1} `);
+} else if (number3 > number1 && number3 > number2) {
+  if (number1 > number2) console.log(`${number3}, ${number1}, ${number2} `);
+  else console.log(`${number3}, ${number2}, ${number1} `);
+}
 
 // 문제 8: 가위바위보 게임
 // 두 명의 플레이어가 참여하는 가위바위보 게임을 만드시오.
@@ -171,22 +171,22 @@
 // 플레이어 2가 이기면 '플레이어2 승리'를 출력합니다.
 // 두 플레이어가 같은 것을 내면 '무승부'를 출력합니다.
 
-// let player1 = Number(prompt("플레이어 1 \n 가위(0), 바위(1), 보(2) 입력"));
-// let player2 = Number(prompt("플레이어 1 \n 가위(0), 바위(1), 보(2) 입력"));
+let player1 = Number(prompt("플레이어 1 \n 가위(0), 바위(1), 보(2) 입력"));
+let player2 = Number(prompt("플레이어 1 \n 가위(0), 바위(1), 보(2) 입력"));
 
-// if (player1 == 0) {
-//   if (player1 - player2 == 0) console.log("비김");
-//   else if (player1 - player2 == -1) console.log("플레이어2 승리");
-//   else if (player1 - player2 == -2) console.log("플레이어1 승리");
-// } else if (player1 == 1) {
-//   if (player1 - player2 == 1) console.log("플레이어1 승리");
-//   else if (player1 - player2 == 0) console.log("무승부");
-//   else if (player1 - player2 == -1) console.log("플레이어2 승리");
-// } else if (player1 == 2) {
-//   if (player1 - player2 == 2) console.log("플레이어2 승리");
-//   else if (player1 - player2 == 1) console.log("플레이어1 승리");
-//   else if (player1 - player2 == 0) console.log("무승부");
-// }
+if (player1 == 0) {
+  if (player1 - player2 == 0) console.log("비김");
+  else if (player1 - player2 == -1) console.log("플레이어2 승리");
+  else if (player1 - player2 == -2) console.log("플레이어1 승리");
+} else if (player1 == 1) {
+  if (player1 - player2 == 1) console.log("플레이어1 승리");
+  else if (player1 - player2 == 0) console.log("무승부");
+  else if (player1 - player2 == -1) console.log("플레이어2 승리");
+} else if (player1 == 2) {
+  if (player1 - player2 == 2) console.log("플레이어2 승리");
+  else if (player1 - player2 == 1) console.log("플레이어1 승리");
+  else if (player1 - player2 == 0) console.log("무승부");
+}
 
 // 문제 9: 주차 차량 위치 검색
 // 주차장 차량 정보가 다음과 같이 두 개의 배열로 관리되고 있습니다.
@@ -206,18 +206,18 @@
     없으면 false 반환
 */
 
-// let carNumber = prompt("차량 번호 입력(예: '111어2541'");
-// let carArray = ["250어7142", "142가7415", "888호8888"];
-// let locationArray = ["A1", "B3", "C2"];
-// let locationNumber;
+let carNumber = prompt("차량 번호 입력(예: '111어2541'");
+let carArray = ["250어7142", "142가7415", "888호8888"];
+let locationArray = ["A1", "B3", "C2"];
+let locationNumber;
 
-// if (carArray.includes(carNumber) == true) {
-//   locationNumber = carArray.indexOf(carNumber);
-//   console.log(
-//     `차량번호 ${carNumber}의 위치는 ${locationArray[locationNumber]}입니다.`,
-//   );
-// } else
-//   console.log(`차량번호 ${carNumber}는 해당 주차장에 주차되어있지 않습니다.`);
+if (carArray.includes(carNumber) == true) {
+  locationNumber = carArray.indexOf(carNumber);
+  console.log(
+    `차량번호 ${carNumber}의 위치는 ${locationArray[locationNumber]}입니다.`,
+  );
+} else
+  console.log(`차량번호 ${carNumber}는 해당 주차장에 주차되어있지 않습니다.`);
 
 // 문제 10: 수강 신청 목록에서 과목 제외하기
 // 현재 수강 신청한 과목 목록이 배열로 주어져 있습니다.
