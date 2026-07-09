@@ -1,15 +1,11 @@
 let table = [".", ".", ".", ".", ".", ".", ".", ".", "."];
 
-console.log(table);
-
 let name1 = prompt("첫번째 순서로 할 사람 이름 입력");
 let name2 = prompt("두번째 순서로 할 사람 이름 입력");
-let emptynumber = [];
+
 let turn = 1;
 let gameend1 = false;
 let gameend2 = false;
-
-// if ("o" == "O") console.log("같다.");
 
 // 첫번째 턴
 if (turn % 2 != 0 && gameend1 == false && gameend2 == false) {
@@ -70,7 +66,7 @@ if (turn % 2 != 0 && gameend1 == false && gameend2 == false) {
       }
     }
   }
-  // 세번째 턴
+  // 세번째 턴 -- 이후 홀수번 턴 복사 + 붙여넣기
   if (turn % 2 != 0 && gameend1 == false && gameend2 == false) {
     //홀수 턴이고, 게임승리가 안됨
     let indexO = Number(prompt(`${name1}님 차례: 번호입력(1~9) 턴: ${turn}`)); //번호 입력
@@ -102,7 +98,7 @@ if (turn % 2 != 0 && gameend1 == false && gameend2 == false) {
     }
   }
 
-  // 네번째 턴
+  // 네번째 턴 - 이후 짝수턴 복사 + 붙여넣기
   if (turn % 2 == 0 && gameend1 == false && gameend2 == false) {
     //짝수 턴이고, 게임승리가 안됨
 

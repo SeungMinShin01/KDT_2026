@@ -171,13 +171,77 @@
 // 플레이어 2가 이기면 '플레이어2 승리'를 출력합니다.
 // 두 플레이어가 같은 것을 내면 '무승부'를 출력합니다.
 
+// let player1 = Number(prompt("플레이어 1 \n 가위(0), 바위(1), 보(2) 입력"));
+// let player2 = Number(prompt("플레이어 1 \n 가위(0), 바위(1), 보(2) 입력"));
+
+// if (player1 == 0) {
+//   if (player1 - player2 == 0) console.log("비김");
+//   else if (player1 - player2 == -1) console.log("플레이어2 승리");
+//   else if (player1 - player2 == -2) console.log("플레이어1 승리");
+// } else if (player1 == 1) {
+//   if (player1 - player2 == 1) console.log("플레이어1 승리");
+//   else if (player1 - player2 == 0) console.log("무승부");
+//   else if (player1 - player2 == -1) console.log("플레이어2 승리");
+// } else if (player1 == 2) {
+//   if (player1 - player2 == 2) console.log("플레이어2 승리");
+//   else if (player1 - player2 == 1) console.log("플레이어1 승리");
+//   else if (player1 - player2 == 0) console.log("무승부");
+// }
+
 // 문제 9: 주차 차량 위치 검색
-// 주차장 차량 정보가 다음과 같이 두 개의 배열로 관리되고 있습니다. 두 배열에서 같은 인덱스는 동일한 차량의 정보를 의미합니다.
+// 주차장 차량 정보가 다음과 같이 두 개의 배열로 관리되고 있습니다.
+//  두 배열에서 같은 인덱스는 동일한 차량의 정보를 의미합니다.
 // 차량 번호 목록: let carArray = [ '250어7142', '142가7415', '888호8888' ];
 // 주차 위치 목록: let locationArray = [ 'A1', 'B3', 'C2' ];
-// 사용자로부터 차량 번호를 입력받아, carArray에서 해당 차량을 찾은 뒤 locationArray에 있는 그 차량의 주차 위치를 찾아 출력하는 프로그램을 작성하시오. 만약 해당하는 차량 번호가 없다면 '차량이 존재하지 않습니다.'를 출력하시오.
+// 사용자로부터 차량 번호를 입력받아,
+// carArray에서 해당 차량을 찾은 뒤 locationArray에 있는 그 차량의 주차 위치를 찾아 출력하는 프로그램을 작성하시오. 만약 해당하는 차량 번호가 없다면 '차량이 존재하지 않습니다.'를 출력하시오.
+
+/*
+    5. 배열 요소 찾기 day03 - exam1.js
+    .indexof(찾을값)
+    만약에 찾을 값이 존재하면 찾은 인덱스를 반환
+    없으면 -1
+     .includes(찾을값)
+    만약에 찾을값이 존재하면 true
+    없으면 false 반환
+*/
+
+// let carNumber = prompt("차량 번호 입력(예: '111어2541'");
+// let carArray = ["250어7142", "142가7415", "888호8888"];
+// let locationArray = ["A1", "B3", "C2"];
+// let locationNumber;
+
+// if (carArray.includes(carNumber) == true) {
+//   locationNumber = carArray.indexOf(carNumber);
+//   console.log(
+//     `차량번호 ${carNumber}의 위치는 ${locationArray[locationNumber]}입니다.`,
+//   );
+// } else
+//   console.log(`차량번호 ${carNumber}는 해당 주차장에 주차되어있지 않습니다.`);
 
 // 문제 10: 수강 신청 목록에서 과목 제외하기
 // 현재 수강 신청한 과목 목록이 배열로 주어져 있습니다.
 // let courseList = ['수학', '영어', '과학', '국어'];
-// 사용자로부터 제외하고 싶은 과목명을 입력받아, courseList에 해당 과목이 존재하면 목록에서 삭제한 뒤 변경된 배열 전체를 출력하세요. 만약 존재하지 않는 과목이면 '해당 과목은 신청 목록에 없습니다.'를 출력하는 프로그램을 작성하시오.
+// 사용자로부터 제외하고 싶은 과목명을 입력받아, courseList에 해당 과목이 존재하면
+// 목록에서 삭제한 뒤 변경된 배열 전체를 출력하세요.
+// 만약 존재하지 않는 과목이면 '해당 과목은 신청 목록에 없습니다.'를 출력하는 프로그램을 작성하시오.
+
+/*
+   .includes(찾을값)
+    만약에 찾을값이 존재하면 true
+     .indexof(찾을값)
+    만약에 찾을 값이 존재하면 찾은 인덱스를 반환
+    없으면 -1
+    없으면 false 반환
+// 4. 배열 요소 삭제, splice( 삭제할인덱스, 개수)
+arr2.splice(0, 1); // 0번 인덱스에 요소 1개를 삭제한다.
+*/
+
+let wishList = prompt("제외하고 싶은 과목명 입력");
+let courseList = ["수학", "영어", "과학", "국어"];
+let listIndex;
+if (courseList.includes(wishList) == true) {
+  listIndex = courseList.indexOf(wishList);
+  courseList.splice(listIndex, 1);
+  console.log(courseList);
+} else console.log("해당 과목은 수강 신청 목록에 없습니다.");
