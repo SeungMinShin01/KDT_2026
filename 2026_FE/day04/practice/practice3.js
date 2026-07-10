@@ -20,19 +20,19 @@
 let fruitList = ["사과", "바나나"];
 let newFruit = prompt("추가할 과일 입력");
 
-if (fruitList.includes(newFruit)) console.log("이미 존재하는 과일입니다ush.");
+if (fruitList.includes(newFruit)) console.log("이미 존재하는 과일입니다.");
 else {
   fruitList.push(newFruit);
   console.log(fruitList);
 }
 
-// 문제 2: 성별에 따른 색상 지정s
+// 문제 2: 성별에 따른 색상 지정
 // 주민등록번호 13자리를 문자열로 입력받습니다.
 // 성별을 나타내는 7번째 숫자가 '1' 또는 '3'이면 'blue'를,
 // '2' 또는 '4'이면 'red'를 출력하는 프로그램을 작성하시오.
 
 let 주민등록번호 = prompt("주민등록번호 13자리 입력");
-let num4 = 주민등록번호.charAt(6);
+let num5 = 주민등록번호.charAt(6);
 
 console.log(num5);
 
