@@ -111,8 +111,28 @@
     재고가 부족하면 "재고가 부족합니다."
 */
 
-let products = ["볼펜", "노트", "지우개"];
-let stock = [10, 5, 20];
+// let products = ["볼펜", "노트", "지우개"];
+// let stock = [10, 5, 20];
 
-let productName = prompt("상품명 입력");
-let quantity;
+// let productName = prompt("상품명 입력");
+// let quantity = Number(prompt("수량 입력"));
+
+// for (let i = 0; i < products.length; i++) {
+//   if (products[i].includes(productName) && stock[i] > quantity) {
+//     //상품과 재고의 인덱스가 서로 같다는 가정하에
+//     console.log("구매 완료!");
+//   } else if (products[i].includes(productName) && stock[i] < quantity) {
+//     console.log("재고가 부족합니다.");
+//   }
+// }
+
+/*
+    [문제 8] 영화 평점 시각화
+    (1) 초기  데이터  - 두 배열의 동일한 인덱스 사용 
+    10점만점만큼 꽉찬별, 나머지 점수만큼 빈 별을 출력
+    HTML 표시 ★ ☆
+*/
+
+let movieNames = ["히든페이즈", "위키드", "글래디ㅔ이터2", "청설"];
+let movieRatings = [8, 4, 7, 6];
+let maxRate = 10;
