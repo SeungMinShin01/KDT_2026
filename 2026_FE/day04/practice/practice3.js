@@ -172,8 +172,17 @@ if (number1 > number2 && number1 > number3) {
 // 두 플레이어가 같은 것을 내면 '무승부'를 출력합니다.
 
 let player1 = Number(prompt("플레이어 1 \n 가위(0), 바위(1), 보(2) 입력"));
-let player2 = Number(prompt("플레이어 1 \n 가위(0), 바위(1), 보(2) 입력"));
+let player2 = Number(prompt("플레이어 2 \n 가위(0), 바위(1), 보(2) 입력"));
 
+let 승자;
+
+if (player1 - player2 == -1 || player1 - player2 == 2) 승자 = player2;
+else if (player1 - player2 == 1 || player1 - player2 == -2) 승자 = player1;
+else 승자 = 무승부;
+
+console.log(승자);
+
+/*
 if (player1 == 0) {
   if (player1 - player2 == 0) console.log("비김");
   else if (player1 - player2 == -1) console.log("플레이어2 승리");
@@ -187,6 +196,7 @@ if (player1 == 0) {
   else if (player1 - player2 == 1) console.log("플레이어1 승리");
   else if (player1 - player2 == 0) console.log("무승부");
 }
+*/
 
 // 문제 9: 주차 차량 위치 검색
 // 주차장 차량 정보가 다음과 같이 두 개의 배열로 관리되고 있습니다.
@@ -211,7 +221,7 @@ let carArray = ["250어7142", "142가7415", "888호8888"];
 let locationArray = ["A1", "B3", "C2"];
 let locationNumber;
 
-if (carArray.includes(carNumber) == true) {
+if (carArray.includes(carNumber)) {
   locationNumber = carArray.indexOf(carNumber);
   console.log(
     `차량번호 ${carNumber}의 위치는 ${locationArray[locationNumber]}입니다.`,
