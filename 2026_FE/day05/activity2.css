@@ -5,13 +5,20 @@ body {
 }
 
 .logo {
-  width: 500px;
+  width: 400px;
   height: 220px;
   display: block;
   margin: 0 auto;
   object-fit: contain;
 }
 
+/*
+object-fit
+- 이미지나 비디오 등의 대체 콘텐츠(object)가 자신의 요소 박스 내에서, 
+  설정된 너비와 높이에 따라 어떤 방식으로 맞춰(fit)서 표시될지를 지정합니다.
+  object-fit: fill | contain | cover | none | scale-down
+참고자료: https://codingeverybody.kr/css-object-fit-%EC%86%8D%EC%84%B1/ 
+*/
 .main-title {
   font-size: 50px;
 }
@@ -19,12 +26,13 @@ body {
 .main-grid {
   width: 100%;
   padding: 20px;
-  background-color: #b8c8e780;
+  background-color: #fff;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 10px;
   border-radius: 12px;
 }
+
 .main-grid2 {
   width: 100%;
   padding: 20px;
