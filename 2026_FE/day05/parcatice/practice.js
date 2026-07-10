@@ -133,19 +133,54 @@
     HTML 표시 ★ ☆
 */
 
-let movieNames = ["히든페이즈", "위키드", "글래디에이터2", "청설"];
-let movieRatings = [8, 4, 7, 6];
-let maxRate = 10;
-let rate = "";
+// let movieNames = ["히든페이즈", "위키드", "글래디에이터2", "청설"];
+// let movieRatings = [8, 4, 7, 6];
+// let maxRate = 10;
+// let rate = "";
 
-for (let i = 0; i < movieNames.length; i++) {
-  rate += `<tbody><tr><td> ${movieNames[i]}</td><td> `;
-  for (let j = 0; j < movieRatings[i]; j++) {
-    rate += `★`;
+// for (let i = 0; i < movieNames.length; i++) {
+//   rate += `<tbody><tr><td> ${movieNames[i]}</td><td> `;
+//   for (let j = 0; j < movieRatings[i]; j++) {
+//     rate += `★`;
+//   }
+//   for (let k = 0; k < 10 - movieRatings[i]; k++) {
+//     rate += `☆`;
+//   }
+//   rate += `</td></tr></tbody><br />`;
+//   document.querySelector("table").innerHTML = `${rate}`;
+// }
+
+/*
+    [문제 9] 좌석 예약 상태 표시
+    6개의 좌석을 2칸식 3줄 형태로 표시
+    좌석 상태에 따라
+    빈좌석 - blue / 예약석 - red
+*/
+
+let seatStatus = ["빈좌석", "예약석", "예약석", "빈좌석", "예약석", "빈좌석"];
+
+let result2 = "";
+let color = "";
+
+for (let i = 0; i < seatStatus.length; i++) {
+  if (seatStatus[i] == "예약석") {
+    color = "red";
+  } else if (seatStatus[i] == "빈좌석") {
+    color = "blue";
   }
-  for (let k = 0; k < 10 - movieRatings[i]; k++) {
-    rate += `☆`;
-  }
-  rate += `</td></tr></tbody><br />`;
-  document.querySelector("table").innerHTML = `${rate}`;
+  /* 
+    <h2><span style="color: 색깔(red/blue)">좌석상태</span>
+    <span style="color 색깔(red/blue)>좌석상태</span><br />...</h2> 반복"
+    하면 -> 두칸씩 <br /> / 정해진 color (blue / red)에 따라 <span> 태그에 color 속성 변경
+    빈좌석 예약석
+    예약석 빈좌석
+    예약석 빈좌석
+  */
+  if (i % 2 == 1) {
+    document.querySelector(`h2 `).innerHTML +=
+      `<span style="color: ${color};">${seatStatus[i]}</span> `;
+    document.querySelector("h2").innerHTML += "<br />";
+  } else
+    document.querySelector("h2").innerHTML +=
+      `<span style="color: ${color};">${seatStatus[i]}</span> `;
 }
