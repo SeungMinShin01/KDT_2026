@@ -91,7 +91,10 @@ console.log(newNumbers);
 */
 let numbers2 = [5, 3, 4, 1, 2, 6, 8, 0];
 
-for (let i = 0; i < numbers2.length; i++) {
+for (let i = 0; i < numbers2.length - 1; i++) {
+  // number2.length까지 돌릴 이유가 없다.
+  // 마지막 인덱스 - 1까지만 돌리면 마지막인덱스 -1 과 마지막 인덱스를 비교하기 떄문
+  // numbers2.length -> numbers2.length-1 로 수정함.
   for (let j = 0; j < numbers2.length; j++) {
     if (numbers2[j] < numbers2[j + 1]) {
       let temp;
@@ -179,8 +182,7 @@ for (let i = 0; i < seatStatus.length; i++) {
   */
   if (i % 2 == 1) {
     document.querySelector(`h2 `).innerHTML +=
-      `<span style="color: ${color};">${seatStatus[i]}</span> `;
-    document.querySelector("h2").innerHTML += "<br />";
+      `<span style="color: ${color};">${seatStatus[i]}</span> <br />`;
   } else
     document.querySelector("h2").innerHTML +=
       `<span style="color: ${color};">${seatStatus[i]}</span> `;
