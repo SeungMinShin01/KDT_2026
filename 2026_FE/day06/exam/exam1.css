@@ -1,0 +1,93 @@
+h5 {
+  color: yellow;
+}
+
+/*
+    CSS 주석
+    (html)마크업에 스타일 적용 문법
+    
+    선택자 { 속성명 : 속성값; 속성명 : 속성값 }
+    선택자 종류
+        1. * : 와일드카드(전체)
+        2. h4 : 특정마크업명
+    선택자 우선순위
+        - 만약에 동일한 속성이 중복이면
+        * < 특정 마크업 < .className < #id2
+        만일 동일한 수준이면 아래에 구성한 CSS 적용
+*/
+* {
+  color: aquamarine;
+}
+h6 {
+  color: cadetblue;
+}
+.구역1 {
+  color: darkorange;
+}
+#구역2 {
+  color: #fff;
+}
+#구역2 {
+  color: tomato;
+}
+
+/*
+    자식선택자 : 상위선택자 > 자식선택자 
+*/
+div > h3 {
+  color: hotpink;
+}
+/*
+    자손선택자 : 상위선택자 하위선택자
+*/
+
+div li {
+  background-color: darkturquoise;
+}
+
+/* 다양한 선택자 제공 */
+html > body > div > ol > li {
+}
+/* vs */
+#이름1 {
+}
+
+.title {
+  font-family: "궁서";
+  color: steelblue;
+  text-align: center;
+  font-size: xxx-large;
+  font-style: italic;
+  font-weight: bold;
+}
+@font-face {
+  font-family: "PyeojinGothic";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/2504-1@1.0/PyeojinGothic-Light.woff2")
+    format("woff2");
+  font-weight: 300;
+  font-display: swap;
+}
+
+.content {
+  font-family: "PyeojinGothic", sans-serif;
+  color: chocolate;
+  word-spacing: 10px;
+  letter-spacing: 5px;
+  line-height: 160%;
+}
+
+.작성자 {
+  text-align: center;
+  text-decoration: line-through;
+  text-shadow: 10px 5px 10px blue;
+  color: green;
+  color: rgb(0, 255, 0);
+  color: rgba(0, 255, 0, 0.8);
+  color: #008000;
+}
+/*
+    underline : 밑줄 , overline : 윗줄 , line-through : 취소선
+    text-shadow
+    x축( + 오른쪽 - 왼쪽 ) y축 ( + 아래 - 위 ) 흐림정도 색상
+    색상 표현 방법
+*/

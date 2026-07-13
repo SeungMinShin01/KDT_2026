@@ -22,18 +22,74 @@
     함수 사용 금지
 */
 
-let gameend = false;
 let turn = 0;
 let 승자 = "";
-let 게임판 = [];
+let 게임판;
+let 게임종료 = false;
+for (let i = 0; i < 3; i++) {
+  for (let j = 0; j < 3; j++) {
+    // 게임판 초기화
+    게임판[i][j] += " ";
+  }
+}
+
+for (let j = 0; j < 3; j++) {
+  for (let j = 0; j < 3; j++) {
+    // 게임판 출력
+    document.querySelector("tbody").innerHTML +=
+      `<tr><td>${게임판[i][j]}</td><td>${게임판[i][j]}</td><td>${게임판[i][j]}</td></tr>`;
+  }
+}
+turn += 1;
 
 while (1) {
-  for (let i = 0; i < 9; i++) {
-    //게임판 초기화
-    게임판[i] += " ";
-  }
-  for (j = 0; j < 3; j++) {
-    document.querySelector("tbody").innerHTML +=
-      `<tr><td>${게임판[j * 3]}</td><td>${게임판[j * 3 + 1]}</td><td>${게임판[j * 3 + 2]}</td></tr>`;
+  for (let i = 0; i < 3; i++) {
+    for (let j = 0; j < 3; j++) {
+      // 게임승리 조건 검증
+      if (게임판[i][j] != " ") {
+        if (
+          게임판[i][j] == 게임판[i][j + 1] ||
+          게임판[i][j] == 게임판[i + 1][j] ||
+          (게임판[0][0] == 게임판[1][1] && 게임판[1][1] == 게임판[2][2]) ||
+          (게임판[0][2] == 게임판[1][1] && 게임판[1][1] == 게임판[2][0])
+        ) {
+          if (turn % 2 == 1) {
+            승자 = "선공";
+            게임종료 = true;
+            break;
+          } else {
+            승자 = "후공";
+            게임종료 = true;
+            break;
+          }
+        }
+      }
+    }
+    if (turn % 2 == 1 && gameend == false) {
+      let 칸번호 = Number(
+        prompt(`선공 턴: ${turn} \n 칸 번호를 입력하세요 (0~8) :`),
+      );
+      if (게임판[칸번호] == " ") {
+        게임판[칸번호] = "O";
+        for (j = 0; j < 3; j++) {
+          document.querySelector("tbody").innerHTML +=
+            `<tr><td>${게임판[j * 3]}</td><td>${게임판[j * 3 + 1]}</td><td>${게임판[j * 3 + 2]}</td></tr>`;
+        }
+        turn++;
+      } else continue;
+    }
+    if (turn % 2 == 0 && gameend == false) {
+      let 칸번호 = Number(
+        prompt(`후공 턴: ${turn} \n 칸 번호를 입력하세요 (0~8) :`),
+      );
+      if (게임판[칸번호] == " ") {
+        게임판[칸번호] = "X";
+        for (j = 0; j < 3; j++) {
+          document.querySelector("tbody").innerHTML +=
+            `<tr><td>${게임판[j * 3]}</td><td>${게임판[j * 3 + 1]}</td><td>${게임판[j * 3 + 2]}</td></tr>`;
+        }
+        turn++;
+      } else continue;
+    }
   }
 }
