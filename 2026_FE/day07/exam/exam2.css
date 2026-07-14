@@ -44,5 +44,59 @@
 }
 
 .box4 {
-  padding: 10px 5px 15px 1px;
+  padding: 10px 5px 15px 1px; /* 위, 오른쪽, 아래, 왼쪽 */
+  margin: 10px 20px; /* 위/아래 , 왼/오른쪽 */
 }
+
+.box5 {
+  margin: 0 auto; /* 바깥여백의 왼/오른쪽을 auto 설정 */
+  width: 50px; /* 가로사이즈 주의할점: 생략시 100% */
+  color: red;
+  background-color: beige;
+}
+
+.s1 {
+  display: inline; /* span, a 등등 마크업 기본값 */
+  width: 100px;
+  height: 100px; /* 구역 사이즈 설정 불가능 */
+  padding: 20px; /* 왼/오른쪽만 적용 */
+  margin: 20px; /* 왼/오른쪽만 적용*/
+}
+
+.s2 {
+  display: block; /* div, h 등등 마크업 기본값 */
+  width: 100px;
+  height: 100px;
+  padding: 20px;
+  margin: 20px;
+}
+
+.s3 {
+  display: inline-block; /* input 등등 마크업 기본값 */
+  width: 100px;
+  height: 100px;
+  padding: 20px;
+  margin: 20px;
+}
+
+.s4 {
+  display: none;
+}
+
+.box6,
+.box7 {
+  width: 500px;
+  height: 500px;
+  padding: 20px;
+}
+
+.box6 {
+  box-sizing: content-box;
+}
+.box7 {
+  box-sizing: border-box; /* border-box가 더 편하다. */
+}
+/*
+  content-box : 구역크기를 컨텐치 기준 (생략시 기본값) 
+  border-box : 구역크기를 컨텐츠와 안쪽여백 기준
+*/
