@@ -18,7 +18,11 @@ const 객체변수2 = { 속성명1: 10, 속성명2: "안녕" };
 console.log(객체변수2);
 
 // [4] 객체내 속성 호출 , .(도트연산자) , 왼쪽자료의 속성들을 참조()
-console.log(객체변수1.속성명2);
+console.log(객체변수2.속성명2);
+console.log(객체변수2["속성명1"]);
+let a = "속성명1";
+console.log(객체변수2[a]);
+
 console.log(); // console 객체내 log 함수 호출
 console.log(객체변수2.속성명1);
 console.log(Object.keys(객체변수2)); // 객체내 모든 속성명(배열) 출력
