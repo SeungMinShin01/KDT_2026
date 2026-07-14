@@ -1,0 +1,35 @@
+@font-face {
+  font-family: "PyeojinGothic";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/2504-1@1.0/PyeojinGothic-Light.woff2")
+    format("woff2");
+  font-weight: 300;
+  font-display: swap;
+}
+
+.번호1 {
+  font-size: xx-large;
+  font-family: "PyeojinGothic";
+  font-weight: bold;
+  color: orange;
+}
+
+ul {
+  list-style-type: "- ";
+  background-color: #0f6878;
+  color: #fff;
+  word-spacing: 8px;
+  line-height: 160%;
+  padding: 20px;
+}
+li {
+  margin-left: 15px;
+}
+.텍스트1 {
+  color: orange;
+}
+
+div {
+  font-weight: bold;
+  word-spacing: 5px;
+  padding: 10px 0px 10px 0;
+}
