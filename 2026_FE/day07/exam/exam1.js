@@ -55,3 +55,5 @@ const 객체변수3 = {
 console.log(객체변수3.prop3.age);
 // [9] 객체내 속성명 여부 확인, '속성명' in 객체변수
 console.log("prop" in 객체변수3); // true
+
+// [10] 객체 { } 와 배얄 [ ] 조합
