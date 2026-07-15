@@ -76,13 +76,16 @@ console.log(값목록);
 다음 inventory 객체는 각 상품의 재고를 나타냅니다. for 반복문과 if 조건문을 사용하여 재고가 10개 미만인 상품의 이름을 콘솔에 출력하시오.*/
 
 const inventory = { apple: 15, banana: 5, orange: 20, grape: 8 };
-
+let result = [];
 for (let i = 0; i < Object.keys(inventory).length; i++) {
   let values2 = Object.values(inventory);
   let values3 = Object.keys(inventory);
-  console.log(typeof values2[i]);
-  if (values2[i] < 10) console.log(values3);
+
+  if (values2[i] < 10) {
+    result.push(values3[i]);
+  }
 }
+console.log(result);
 /* 예제 10: 객체 배열 순회하기
 다음은 여러 학생의 정보를 담은 students 배열입니다. for 반복문을 사용하여 각 학생의 이름과 전공을 "이름: 전공" 형태로 콘솔에 출력하시오.  
 const students = [ { name: '김철수', major: '컴퓨터공학' },  { name: '이영희', major: '경영학' },  { name: '박지성', major: '체육교육' } ];*/
@@ -208,5 +211,3 @@ for (let i = 0; i < response["data"].length; i++) {
 }
 html += `</table>`;
 document.write(html);
-
-console.log(html);
