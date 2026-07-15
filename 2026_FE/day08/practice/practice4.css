@@ -1,0 +1,47 @@
+@font-face {
+  font-family: "PyeojinGothic";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/2504-1@1.0/PyeojinGothic-Light.woff2")
+    format("woff2");
+  font-weight: 300;
+  font-display: swap;
+}
+* {
+  font-family: "PyeojinGothic";
+}
+.컨테이너 {
+  width: 250px;
+
+  border: 1px solid #a1a1a1;
+}
+
+.수박 {
+  width: 250px;
+  border-bottom: solid 1px #a1a1a1;
+}
+
+.제목1 {
+  font-size: 15px;
+  margin-top: 10px;
+  padding: 5px;
+}
+
+.가격 {
+  font-size: 13px;
+  margin-top: -20px;
+  padding: 5px;
+  font-weight: bold;
+}
+
+.설명 {
+  margin-top: -25px;
+  font-size: 13px;
+  padding: 5px;
+}
+
+.리뷰 {
+  font-size: 13px;
+  padding: 5px;
+}
+span {
+  color: #efab39;
+}
