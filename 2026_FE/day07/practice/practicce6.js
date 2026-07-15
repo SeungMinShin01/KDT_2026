@@ -210,25 +210,25 @@ for (let i = 0; i < team.length; i++) {
 }
 console.log(result);
 
-let result = {};
+// let result = {};
 
-for (let i = 0; i < team.length; i++) {
-  if (team[i].department === "개발팀") {
-    if (!result.개발팀) {
-      result.개발팀 = [];
-    }
+// for (let i = 0; i < team.length; i++) {
+//   if (team[i].department === "개발팀") {
+//     if (!result.개발팀) {
+//       result.개발팀 = [];
+//     }
 
-    result.개발팀.push(team[i].name);
-  }
+//     result.개발팀.push(team[i].name);
+//   }
 
-  if (team[i].department === "기획팀") {
-    if (!result.기획팀) {
-      result.기획팀 = [];
-    }
+//   if (team[i].department === "기획팀") {
+//     if (!result.기획팀) {
+//       result.기획팀 = [];
+//     }
 
-    result.기획팀.push(team[i].name);
-  }
-}
+//     result.기획팀.push(team[i].name);
+//   }
+// }
 
 /*
     [문제 8] 장바구니 총액 계산하기

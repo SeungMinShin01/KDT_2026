@@ -79,13 +79,26 @@ const inventory = { apple: 15, banana: 5, orange: 20, grape: 8 };
 let result = [];
 for (let i = 0; i < Object.keys(inventory).length; i++) {
   let values2 = Object.values(inventory);
-  let values3 = Object.keys(inventory);
+  //   let values3 = Object.keys(inventory);
 
-  if (values2[i] < 10) {
-    result.push(values3[i]);
+  //   if (values2[i] < 10) {
+  if (inventory[values2] < 10) {
+    // inventory.(values2의 값)을 inventory[values2]를 통해 변수 하나 제거 가능
+    console.log(values2); // if문이 true 일때만 출력하기때문에 result 변수 제거 가능 / but 배열형식으로 하려면 result 필요
+    // result.push(values3[i]);
   }
 }
-console.log(result);
+// console.log(result);
+/*
+교수님 풀이
+let 속성명들 = Object.keys(inventory);
+
+for (let i = 0; i <= 속성명들.length - 1; i++) {
+  let 속성명 = 속성명들[i];
+  if (inventory[속성명] < 10) console.log(속성명);
+}
+  */
+
 /* 예제 10: 객체 배열 순회하기
 다음은 여러 학생의 정보를 담은 students 배열입니다. for 반복문을 사용하여 각 학생의 이름과 전공을 "이름: 전공" 형태로 콘솔에 출력하시오.  
 const students = [ { name: '김철수', major: '컴퓨터공학' },  { name: '이영희', major: '경영학' },  { name: '박지성', major: '체육교육' } ];*/
