@@ -1,0 +1,31 @@
+/*
+    display : flex
+*/
+* {
+  border: 1px solid red;
+}
+.box {
+  width: 100px;
+}
+
+.flexbox1 {
+  display: flex; /* 하위요소들 배치 방법 */
+  flex-wrap: nowrap; /*만약에 하위요소들의 크기가 구역보다 커지면 하위요소 자동크기조정*/
+  width: 250px;
+}
+
+.flexbox2 {
+  display: flex;
+  width: 250px;
+  flex-wrap: wrap;
+}
+
+.flexbox3 {
+  display: flex;
+  flex-direction: row;
+}
+
+.flexbox4 {
+  display: flex;
+  flex-direction: column;
+}
