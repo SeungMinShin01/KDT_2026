@@ -26,7 +26,7 @@ console.log(객체변수2[a]);
 console.log(); // console 객체내 log 함수 호출
 console.log(객체변수2.속성명1);
 console.log(Object.keys(객체변수2)); // 객체내 모든 속성명(배열) 출력
-console.log(Object.values(객체변수2)); //객체내 모든 속성명/값 (배열) 출력
+console.log(Object.values(객체변수2)); //값 (배열) 출력
 console.log(Object.entries(객체변수2)); // 객체내 모든 속성명/값 (배열) 출력
 
 // [5] 객체내 속성 추가
