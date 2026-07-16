@@ -21,7 +21,7 @@ header {
   /* border: 3px solid blue; */
   top: 0;
   z-index: 100;
-  background-color: beige;
+  background-color: #e6ceb0;
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.12);
 }
 footer {
@@ -96,22 +96,29 @@ body::-webkit-scrollbar {
   width: 1000px;
   min-height: 90px;
   padding: 10px;
-  border: 1px solid red;
+  /* border: 1px solid red; */
   background-color: #fff;
   box-shadow: 2px 4px 8px #00000071;
 }
 
 .하단영역 {
-  border: 1px solid red;
+  /* border: 1px solid red; */
   display: flex;
   justify-content: center;
   gap: 150px;
+  margin-bottom: 12px;
 }
 
 .결제버튼 {
   padding: 10px;
   width: 300px;
   height: 50px;
+  border-radius: 15px;
+  background-color: #a07639;
+  color: #fff;
+  font-size: 24px;
+  margin-left: 30px;
+  border-color: #a77734;
 }
 
 .총금액 {
@@ -122,15 +129,10 @@ body::-webkit-scrollbar {
   width: 1080px;
   height: 1920px;
 }
-
-header {
-  position: fixed;
-  top: 0;
-  width: 1080px;
-  height: 180px;
-  background-color: #e6ceb0;
-  z-index: 100;
-  font-family: "Juache", sans-serif;
+.가격색상 {
+  color: #a07639;
+  margin-left: 10px;
+  font-size: 31px;
 }
 
 .category-wrap {
@@ -144,11 +146,37 @@ header {
   padding-left: 90px;
 }
 
+.도움버튼 {
+  width: 120px;
+  padding: 10px;
+  background-color: #fff;
+  color: gray;
+  font-size: 20px;
+  border-radius: 12px;
+  margin-right: 10px;
+  border-color: gray;
+}
+.처음버튼 {
+  width: 140px;
+  padding: 10px;
+  background-color: #fff;
+  color: gray;
+  font-size: 20px;
+  border-radius: 12px;
+  margin-left: 20px;
+  border-color: gray;
+}
 .category-list {
   display: flex;
   justify-content: center;
   gap: 30px;
   /*border: 1px solid red;*/
+}
+.주문수량 {
+  font-size: 26px;
+  margin-left: -140px;
+  margin-right: 100px;
+  width: 160px;
 }
 
 .category {
