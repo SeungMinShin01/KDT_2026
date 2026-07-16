@@ -118,6 +118,7 @@ for (let i = 0; i < products2.length; i++) {
   if (products2[i].id == 3) {
     a = true;
     console.log(products2[i]);
+    break;
   }
 }
 if (a == false) console.log("상품을 찾을 수 없습니다.");
@@ -207,8 +208,7 @@ const team = [
 let result = {};
 for (let i = 0; i < team.length; i++) {
   if (team[i].department in result) {
-    result[team[i].department].push(team[i].name);
-    result[개발팀].push(철수); //이름만 추가.
+    result[team[i].department].push(team[i].name); //이름만 추가.
   } else {
     result[team[i].department] = [team[i].name];
   }
