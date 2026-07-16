@@ -75,17 +75,22 @@ const scores = [
   },
 ];
 let 결과 = "";
-
+let 총점수 = 0;
+let 총평균 = 0;
 for (let i = 0; i < scores.length; i++) {
-  let 평균;
-  평균 = (scores[i].math + scores[i].science) / 2;
-  결과 += `${scores[i].name} 평균: ${평균} \n`;
+  let 평균 = 0;
+  총점수 += scores[i].math;
+
+  평균 = (scores[i].math + scores[i].science) / 2; // 내풀이는 각 학생의 "수학+과학"의 평균
+  결과 += `${scores[i].name} 평균: ${평균} \n `;
 }
+총평균 = 총점수 / parseInt(scores.length); // 문제는 "모든 학생"의 "수학 평균"
 console.log(결과);
+console.log(총평균);
 
 /*
     [문제 4] 특정 조건 만족하는 객체 찾기
-    products 배열에서 id가 3인 상품 객체를 찾아, 해당 객체 전체를 콘솔에 출력
+    products 배열에서 id가 3인 상품 객체를 찾아, 해당 객체 전체를 콘1솔에 출력
     일치하는 객체가 없으면 "상품을 찾을 수 없습니다." 출력
 */
 
@@ -283,16 +288,16 @@ console.log(price);
     후보의 이름이 키이고, 득표수가 값인 객체를 만들어 출력 
 */
 
-const votes = ["A", "B", "B", "C", "A", "B", "A"];
+// const votes = ["A", "B", "B", "C", "A", "B", "A"];
 
-let result = {};
+// let result = {};
 
-for (let i = 0; i < votes.length; i++) {
-  if (votes[i] in result) {
-    result[votes[i]]++;
-  } else result[votes[i]] = 1;
-}
-console.log(result);
+// for (let i = 0; i < votes.length; i++) {
+//   if (votes[i] in result) {
+//     result[votes[i]]++;
+//   } else result[votes[i]] = 1;
+// }
+// console.log(result);
 
 /*
     [문제 10] 웹툰 평점 시각화하기

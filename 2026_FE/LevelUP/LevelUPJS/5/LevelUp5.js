@@ -56,6 +56,7 @@ for (let i = 0; i < 회원정보.length; i++) {
         }
       }
     }
+    // if (구독내역[j].회원코드 != 회원정보[i].회원코드) html += `구독 내역이 없습니다. `;
   }
 }
 document.querySelector(`.user1`).innerHTML += html;
