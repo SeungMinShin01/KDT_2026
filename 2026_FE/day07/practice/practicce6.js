@@ -288,16 +288,16 @@ console.log(price);
     후보의 이름이 키이고, 득표수가 값인 객체를 만들어 출력 
 */
 
-// const votes = ["A", "B", "B", "C", "A", "B", "A"];
+const votes = ["A", "B", "B", "C", "A", "B", "A"];
 
-// let result = {};
+let result = {};
 
-// for (let i = 0; i < votes.length; i++) {
-//   if (votes[i] in result) {
-//     result[votes[i]]++;
-//   } else result[votes[i]] = 1;
-// }
-// console.log(result);
+for (let i = 0; i < votes.length; i++) {
+  if (votes[i] in result) {
+    result[votes[i]]++;
+  } else result[votes[i]] = 1;
+}
+console.log(result);
 
 /*
     [문제 10] 웹툰 평점 시각화하기

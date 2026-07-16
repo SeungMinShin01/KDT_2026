@@ -40,6 +40,7 @@ const 구독내역 = [
 ];
 
 let html = "";
+let 구독상태 = false;
 
 for (let i = 0; i < 회원정보.length; i++) {
   html += `${회원정보[i].회원이름}`;
