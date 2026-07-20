@@ -1,6 +1,6 @@
 /* 전체 레이아웃 확인 => 추후에 완성 후 제거 예정 */
 * {
-  border: 1px solid red;
+  /* border: 1px solid red; */
   box-sizing: border-box; /* 여백까지 포함한 사이즈 */
   padding: 0px;
   margin: 0px; /* 기본 여백 제거 */
@@ -34,13 +34,82 @@ li {
   display: flex;
   justify-content: end;
   margin: 10px 0px;
-  gap: 10px;
+  /* gap: 10px; */
 }
 
 .bottom-menu {
   display: flex;
   justify-content: end;
   margin: 10px 0px;
-  gap: 10px;
+
+  /* gap: 10px; */
+}
+
+.bottom-menu > li {
+  margin-left: 50px;
+  font-size: 25px;
+  font-weight: bold;
+}
+.top-menu > li {
+  margin-left: 20px;
+}
+
+#main-img > img {
+  width: 100%;
+}
+
+#main {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+.sidebar {
+  width: 220px;
+}
+
+.sidebar > h3 {
+  background-color: #808080;
+  color: #fff;
+  padding: 10px;
+}
+
+.sidebar > ol > li {
+  padding: 10px;
+  border-bottom: 1px solid #eeeeee;
+}
+.content {
+  width: 1030px;
+}
+
+.content > h3 {
   font-size: 20px;
+  padding-bottom: 20px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #eeeeee;
+}
+
+.content > img {
+  display: block;
+  margin: 20px auto;
+}
+
+#footer {
+  background-color: #2d2b29;
+  margin-top: 20px;
+}
+
+.footer-inner {
+  width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0px;
+}
+
+.right-foot > li {
+  color: #fff;
+}
+.right-foot {
+  padding: 10px;
 }
