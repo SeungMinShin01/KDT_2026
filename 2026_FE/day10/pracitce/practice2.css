@@ -1,0 +1,37 @@
+* {
+  border: 1px red solid;
+}
+
+#header {
+  height: 50px;
+  width: 1280px;
+}
+
+#section {
+  width: 1280px;
+}
+
+#footer {
+  width: 1280px;
+  height: 50px;
+  background-image: url(./assets/bg.jpg);
+  display: flex;
+  justify-content: space-between;
+}
+
+.container {
+  margin: 0 auto;
+  width: 1080px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.sidebar {
+  width: 18%;
+}
+.section {
+  width: 80%;
+}
+.mainImg {
+  width: 1280px;
+}
