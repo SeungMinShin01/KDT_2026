@@ -4,7 +4,7 @@
   box-sizing: border-box; /* 여백까지 포함한 사이즈 */
   padding: 0px;
   margin: 0px; /* 기본 여백 제거 */
-  border: 1px red solid;
+  /* border: 1px red solid; */
 }
 
 a {
@@ -80,7 +80,7 @@ li {
 .section2 {
   background-color: #efefef;
   width: 100%;
-  margin: 40px 0px;
+  margin: 20px 0px;
 }
 
 .section2 > div {
@@ -122,14 +122,19 @@ li {
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
-  margin-bottom: 40px;
+
   padding: 20px 10px;
+}
+
+#footer > div > div {
+  margin-bottom: 40px;
 }
 
 .center_footer_tp {
   display: flex;
   font-size: 12px;
-  margin-bottom: 20px;
+  margin-bottom: 12px;
+  gap: 4px;
 }
 .center_footer_bot > li {
   display: flex;
@@ -141,4 +146,8 @@ li {
   width: 30px;
   height: 30px;
   margin: 0px 7px;
+}
+
+#footer > div > div > h2 {
+  font-size: 22px;
 }

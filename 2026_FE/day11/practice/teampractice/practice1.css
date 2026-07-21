@@ -1,0 +1,169 @@
+* {
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px; /* 기본 여백 제거 */
+}
+a {
+  text-decoration: none; /* a하이퍼링크 밑줄 제거 */
+  color: black;
+}
+li {
+  list-style-type: none; /* li 항목 글머리 제거 */
+}
+
+#header {
+  /* height: 100px; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 1280px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  margin-top: 10px;
+}
+
+#main {
+  width: 1280px;
+  margin: 0 auto;
+}
+
+.top_menu {
+  display: flex;
+  justify-content: end;
+  gap: 5px;
+  font-size: 14px;
+}
+
+.bottom_menu {
+  display: flex;
+  justify-content: end;
+  gap: 95px;
+}
+
+.bottom_menu > li {
+  margin-top: 8px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+#main_img > img {
+  width: 100%;
+}
+
+#main {
+  width: 1280px;
+  margin: 0 auto;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.sidebar {
+  width: 20%;
+}
+
+.left_main {
+  width: 38%;
+}
+.right_main {
+  width: 38%;
+}
+
+.section1 > ol > div,
+.section2 > ol > div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.sidebar > h3 {
+  background-color: #0ba9a1;
+  color: #fff;
+  padding: 13px;
+  margin-bottom: 8px;
+}
+
+.sidebar > input {
+  margin: 10px 5px 20px 0px;
+  padding: 7px;
+  border-radius: 8px;
+}
+
+.sidebar > button {
+  padding: 4px;
+}
+
+.sidebar > h4 {
+  border-top: 2px solid #000;
+  border-bottom: 1px solid #eeeeee;
+  padding: 8px;
+  font-size: 18px;
+}
+
+.comment {
+  margin-top: 30px;
+}
+.sidebar > ol > li {
+  padding: 3px 8px;
+}
+
+.section1 > h4,
+.section2 > h4,
+.right_main > h4 {
+  border-bottom: 2px solid #000;
+  padding: 8px;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.section2 > h4 {
+  margin-top: 50px;
+}
+
+.section1 > ol > div > li,
+.section2 > ol > div > li {
+  padding: 3px 8px;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 10px 50px 10px 0px;
+}
+
+.grid > div > p {
+  margin-top: -3px;
+}
+
+.grid > div {
+  margin-bottom: 30px;
+}
+
+#footer {
+  background-color: #06334f;
+  color: #fff;
+  margin-top: 100px;
+}
+
+.footer_container {
+  width: 1280px;
+  margin: 0 auto;
+  padding: 10px;
+}
+.footer_info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer_container > ol {
+  display: flex;
+  margin-bottom: 30px;
+}
+
+.footer_container > ol > li {
+  margin-right: 30px;
+}
+
+.footer_info > div > ol > li {
+  margin-top: 3px;
+}
