@@ -16,7 +16,24 @@
     <button id="stylebtn" onclick="changecolor()">스타일 변경</button>
 
     <button id="themeBtn" onclick="changeTheme()">다크 모드</button>
+    <div id="targetBox">삭제될 요소</div>
+    <button id="removeBtm" onclick="removeBox()">요소 삭제</button>
 
+    <p class="item">요소 1개</p>
+    <p class="item">요소 2개</p>
+    <p class="item">요소 3개</p>
+
+    <button id="changeImgBtn" onclick="changeImg()">이미지 변경</button>
+    <br />
+    <img id="mainImage" src="./../../맹구.jpeg" />
+    <br />
+    <select id="optionConsole" onchange="select()">
+      <option>밥먹기</option>
+      <option>잠자기</option>
+      <option>집가기</option>
+    </select>
+    <br />
+    <input id="inputBox" onchange="arrConsole()" />
     <script src="exam0.js"></script>
   </body>
 </html>

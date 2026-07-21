@@ -51,8 +51,20 @@ li {
 #main {
   width: 1280px;
   margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
 }
 
+.sidebar {
+  width: 20%;
+}
+
+.left_main {
+  width: 38%;
+}
+.right_main {
+  width: 38%;
+}
 #footer {
   height: 50px;
 }
