@@ -1,0 +1,151 @@
+/* 전체 레이아웃 확인 => 추후에 완성 후 제거 예정 */
+* {
+  /* border: 1px solid red; */
+  box-sizing: border-box; /* 여백까지 포함한 사이즈 */
+  padding: 0px;
+  margin: 0px; /* 기본 여백 제거 */
+  /* border: 1px red solid; */
+}
+
+a {
+  text-decoration: none; /* a하이퍼링크 밑줄 제거 */
+  color: #000; /* 기본색상(파란색) 변경*/
+}
+li {
+  list-style-type: none; /* li 항목 글머리 제거 */
+}
+
+#header {
+  width: 820px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  padding: 30px;
+  margin-bottom: 10px;
+  align-items: center;
+}
+
+.right_menu {
+  display: flex;
+  justify-content: end;
+  gap: 30px;
+  font-size: 15px;
+}
+#header > h2 {
+  font-size: 32px;
+}
+#header > h2 > span {
+  margin-right: 10px;
+  color: #0f00e2;
+}
+
+#main {
+  width: 880px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#main > div > div {
+  display: flex;
+  padding-bottom: 60px;
+  padding-top: 20px;
+}
+
+.img {
+  width: 1280px;
+  display: flex;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+.a {
+  font-weight: 400;
+}
+#main-img {
+  display: flex;
+  margin: 0 auto;
+  padding: 20px 0 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  gap: 40px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+.mm {
+  background-color: #eeeeee;
+  display: flex;
+  margin: 0 auto;
+}
+
+#main-img > div > img {
+  width: 200px;
+}
+
+.b {
+  font-weight: 600;
+}
+
+#footer {
+  display: flex;
+  background-color: #2a2d32;
+  color: #fff;
+  width: 100%;
+  justify-content: center;
+  margin: 0 auto;
+  margin-top: 15px;
+}
+.footer_inner {
+  display: flex;
+  margin: 0 auto;
+  justify-content: space-between;
+  width: 880px;
+  margin-bottom: 40px;
+  margin-top: 20px;
+  padding: 20px 10px;
+}
+
+.footer_left {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  margin-right: -40px;
+}
+
+.footer_left > div > h6 {
+  font-size: 7px;
+}
+.footer_left > div > h4 {
+  font-size: 10px;
+}
+
+.footer_middle {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.footer_middle1 {
+  color: white;
+  margin: 0 auto;
+  margin-bottom: 17px;
+  font-size: 12px;
+}
+
+.footer_middle2 {
+  color: white;
+  margin: 0 auto;
+
+  font-size: 12px;
+}
+
+.footer_right {
+  width: 25%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer_right > div > img {
+  width: 30px;
+  margin: 0px 5px;
+}

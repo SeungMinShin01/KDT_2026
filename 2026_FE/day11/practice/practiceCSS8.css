@@ -1,0 +1,144 @@
+/* 전체 레이아웃 확인 => 추후에 완성 후 제거 예정 */
+* {
+  /* border: 1px solid red; */
+  box-sizing: border-box; /* 여백까지 포함한 사이즈 */
+  padding: 0px;
+  margin: 0px; /* 기본 여백 제거 */
+  border: 1px red solid;
+}
+
+a {
+  text-decoration: none; /* a하이퍼링크 밑줄 제거 */
+  color: #000; /* 기본색상(파란색) 변경*/
+}
+li {
+  list-style-type: none; /* li 항목 글머리 제거 */
+}
+
+#header {
+  width: 820px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  padding: 30px;
+  margin-bottom: 10px;
+  align-items: center;
+}
+
+.right_menu {
+  display: flex;
+  justify-content: end;
+  gap: 30px;
+  font-size: 15px;
+}
+#header > h2 {
+  font-size: 32px;
+}
+#header > h2 > span {
+  margin-right: 10px;
+  color: #0f00e2;
+}
+
+#mainImage {
+  width: 1500px;
+  margin: 0 auto;
+}
+#main {
+  width: 800px;
+  margin: 0 auto;
+}
+
+#mainImage > img {
+  display: block;
+  width: 1280px;
+  margin: 0 auto;
+}
+
+.section1 {
+  display: flex;
+  justify-content: space-between;
+}
+.section1 > div {
+  display: flex;
+  /* align-items: center; */
+  margin: 20px 10px;
+}
+.section1 > div > img {
+  margin-right: 20px;
+  width: 17%;
+}
+.section1 > div > div {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  font-size: 12px;
+}
+.section1 > div > div > h4 {
+  font-size: 17px;
+}
+
+.section2 {
+  background-color: #efefef;
+  width: 100%;
+  margin: 40px 0px;
+}
+
+.section2 > div {
+  display: flex;
+  width: 800px;
+  margin: 0 auto;
+}
+
+.section2 > div > div {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+
+  margin: 20px 10px;
+}
+
+.section2 > div > div > img,
+.section2 > div > div > h4,
+.section2 > div > div > div {
+  width: 100%;
+  height: auto;
+}
+.section2 > div > div > h4 {
+  font-size: 14px;
+}
+.section2 > div > div > div {
+  font-size: 12px;
+}
+
+#footer {
+  width: 100%;
+  margin: 0 auto;
+  background-color: #292d32;
+  color: #fff;
+}
+
+#footer > div {
+  width: 800px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+  padding: 20px 10px;
+}
+
+.center_footer_tp {
+  display: flex;
+  font-size: 12px;
+  margin-bottom: 20px;
+}
+.center_footer_bot > li {
+  display: flex;
+  flex-direction: column;
+  font-size: 12px;
+}
+
+#footer > div > div > img {
+  width: 30px;
+  height: 30px;
+  margin: 0px 7px;
+}
