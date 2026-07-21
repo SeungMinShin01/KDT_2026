@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="practice7.css" rel="stylesheet" />
+    <title>Page Title</title>
+  </head>
+  <body>
+    <div class="wrap">
+      <h2>미니 가계부</h2>
+      <h4>등록 영역</h4>
+      <ol>
+        <li>날짜선택 : <input class="date" type="date" value="" /></li>
+        <li>항목입력 : <input class="item" type="text" value="" /></li>
+        <li>금액입력 : <input class="price" type="text" value="" /></li>
+        <button class="submit" type="button" onclick="showBudget()">
+          등록버튼
+        </button>
+      </ol>
+      <h4>목록 영역</h4>
+      <table border="1">
+        <thead>
+          <tr>
+            <th>날짜</th>
+            <th>항목</th>
+            <th>금액</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>2025-06-19</td>
+            <td>점심 식사</td>
+            <td>9,000</td>
+          </tr>
+          <tr>
+            <td>2025-06-19</td>
+            <td>교통비</td>
+            <td>1,500</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <script src="practice7.js"></script>
+  </body>
+</html>

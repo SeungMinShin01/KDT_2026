@@ -1,0 +1,58 @@
+/* 전체 레이아웃 확인 => 추후에 완성 후 제거 예정 */
+* {
+  /* border: 1px solid red; */
+  box-sizing: border-box; /* 여백까지 포함한 사이즈 */
+  padding: 0px;
+  margin: 0px; /* 기본 여백 제거 */
+  border: 1px red solid;
+}
+
+a {
+  text-decoration: none; /* a하이퍼링크 밑줄 제거 */
+  color: #000; /* 기본색상(파란색) 변경*/
+}
+li {
+  list-style-type: none; /* li 항목 글머리 제거 */
+}
+
+#header {
+  /* height: 100px; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 1280px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+
+.top_menu {
+  display: flex;
+  justify-content: end;
+  gap: 5px;
+  font-size: 14px;
+}
+
+.bottom_menu {
+  display: flex;
+  justify-content: end;
+  gap: 95px;
+}
+
+.bottom_menu > li {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+#main_img > img {
+  width: 100%;
+  height: 240px;
+}
+
+#main {
+  width: 1280px;
+  margin: 0 auto;
+}
+
+#footer {
+  height: 50px;
+}

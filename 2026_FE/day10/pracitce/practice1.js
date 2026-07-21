@@ -37,7 +37,7 @@ console.log(sumArray());
     배열 매개변수 가장 긴 단어를 찾아 반환
 */
 
-const words = ["apple", "banna", "kiwi", "strawberry"];
+const words = ["apple", "banna", "kiwi", "strawberry"]; //const로 선언해도 배열 내부값은 변경될 수 있다.
 
 function findLongestWord() {
   let max = 0;

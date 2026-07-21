@@ -1,0 +1,53 @@
+/* 전체 레이아웃 확인 => 추후에 완성 후 제거 예정 */
+* {
+  /* border: 1px solid red; */
+  box-sizing: border-box; /* 여백까지 포함한 사이즈 */
+  padding: 0px;
+  margin: 0px; /* 기본 여백 제거 */
+  /* border: 1px red solid; */
+}
+
+a {
+  text-decoration: none; /* a하이퍼링크 밑줄 제거 */
+  color: #000; /* 기본색상(파란색) 변경*/
+}
+li {
+  list-style-type: none; /* li 항목 글머리 제거 */
+}
+
+.wrap {
+  width: 800px;
+  margin: 0 auto;
+  margin-top: 20px;
+  border: 1px solid #000;
+  padding: 20px;
+}
+
+.wrap > h2 {
+  font-size: 40px;
+  text-align: center;
+  padding: 10px;
+}
+
+.wrap > h4 {
+  font-size: 24px;
+  margin: 20px 0px;
+}
+
+.wrap > ol > li {
+  margin-bottom: 5px;
+}
+
+.date {
+  padding: 3px;
+}
+
+.item,
+.price {
+  padding: 3px;
+}
+.submit {
+  margin-top: 5px;
+  width: 70px;
+  padding: 3px;
+}
