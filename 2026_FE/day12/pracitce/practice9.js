@@ -49,11 +49,15 @@ let vacationList = [
   },
 ];
 
-//1. READ
+// 부서함수
+//1. 부서 READ
 departmentPrint();
 function departmentPrint() {
   let tbody = document.querySelector(".card table tbody");
   let html = "";
+  let html2 = "";
+  let eDepartment = document.querySelector(".e-department");
+  let changeDepartment = [];
   for (let i = 0; i < departmentList.length; i++) {
     let department = departmentList[i];
     html += `<tr>
@@ -65,12 +69,22 @@ function departmentPrint() {
             </tr>`;
   }
   tbody.innerHTML = html;
+  html2 += `<option disabled selected hidden>부서를 선택하세요</option>`;
+  for (let j = 0; j < departmentList.length; j++) {
+    changeDepartment.push(departmentList[j].dname);
+  }
+  for (let k = 0; k < changeDepartment.length; k++) {
+    html2 += `</option><option value="${k + 1}">${changeDepartment[k]}</option>`;
+  }
+
+  eDepartment.innerHTML = html2;
 }
 
-//2. CREATE
+//2.  부서 CREATE
 function departmentAdd() {
   let name = document.querySelector(".dname").value;
-  let object = { dcode: lastDepartmentCode, dname: name };
+  let object = { dcode: lastDepartmentCode + 1, dname: name };
+
   console.log(object);
   // 같은 부서명 입력시 오류
   for (let i = 0; i < departmentList.length; i++) {
@@ -81,12 +95,11 @@ function departmentAdd() {
   }
   departmentList.push(object);
   lastDepartmentCode++;
-
   alert("등록 성공");
   departmentPrint();
 }
 
-//3. Update
+//3. 부서 Update
 function departmentUpdate(dcode) {
   for (let i = 0; i < departmentList.length; i++) {
     if (departmentList[i].dcode == dcode) {
@@ -99,6 +112,7 @@ function departmentUpdate(dcode) {
         }
       }
       departmentList[i].dname = name;
+
       departmentPrint();
       return;
     }
@@ -108,8 +122,15 @@ function departmentUpdate(dcode) {
 function departmentDelete(dcode) {
   for (let i = 0; i < departmentList.length; i++) {
     if (departmentList[i].dcode == dcode) {
+      // 유효성 검사
+      for (a = 0; a <= employeeList.length - 1; a++) {
+        if (employeeList[a].dcode == dcode) {
+          alert("해당 부서에 사원이 등록되어 있어 삭제할 수 없습니다.");
+          return;
+        }
+      }
       departmentList.splice(i, 1);
-      alert("삭제 성공");
+      alert("부서 삭제 성공");
       departmentPrint();
       return;
     }
@@ -123,6 +144,9 @@ function employeePrint() {
   // JS가 처음 열릴떄, 등록, 수정, 삭제 시 호출
   let tbody = document.querySelector(".employee-table tbody");
   let html = "";
+  let recentEmployee = document.querySelector(".vnamev");
+  let html2 = "";
+  let changeEmployee = [];
 
   for (let i = 0; i < employeeList.length; i++) {
     // 사원 배열 순회하면서 정보 추출
@@ -149,6 +173,19 @@ function employeePrint() {
               </tr>`;
   }
   tbody.innerHTML = html;
+
+  html2 += `<option disabled selected hidden>
+                  휴가 신청 사원을 선택하세요
+                </option>`;
+
+  for (let j = 0; j < employeeList.length; j++) {
+    changeEmployee.push(employeeList[j].ename);
+  }
+  for (let k = 0; k < changeEmployee.length; k++) {
+    html2 += `</option><option value="${k + 1}">${changeEmployee[k]}</option>`;
+  }
+  console.log(changeEmployee);
+  recentEmployee.innerHTML = html2;
 }
 
 //삭제 함수
@@ -198,7 +235,7 @@ function employeeUpdate(ecode) {
       employeeList[i].ename = newname;
       employeeList[i].dcode = newdepartment;
       employeeList[i].eposition = newposition;
-
+      console.log(html2);
       employeePrint();
       return;
     }
@@ -217,7 +254,7 @@ function employeeAdd() {
     alert("카테고리를 선택해주세요.");
     return;
   }
-
+  console.log(department);
   let object = {
     ecode: lastEmployeeCode + 1,
     ename: name,
@@ -231,6 +268,7 @@ function employeeAdd() {
   employeeList.push(object);
   lastEmployeeCode += 1;
   alert("등록성공");
+
   employeePrint();
 }
 
@@ -282,23 +320,24 @@ function vacationDelete(vcode) {
 let lastVacationCode = vacationList.length;
 
 function vacationAdd() {
-  let name = document.querySelector(".vnamev").value;
+  let ecode = document.querySelector(".vnamev").value - 1;
   let startDate = document.querySelector(".vstartDatev").value;
   let endDate = document.querySelector(".vendDatev").value;
   let reason = document.querySelector(".vreasonv").value;
 
-  let ecode = 0;
-
+  let ename2 = "";
+  console.log(ecode);
   for (i = 0; i <= employeeList.length - 1; i++) {
-    if ((employeeList[i].ename = name)) {
-      ecode = employeeList[i].ecode;
+    if ((employeeList[i].ecode = ecode)) {
+      ename2 = employeeList[i].ename;
+      console.log(ename2);
       break;
     }
   }
 
   let vobject = {
     vcode: lastVacationCode + 1,
-    ecode: ecode,
+    ename: ecode,
     vstart: startDate,
     vend: endDate,
     vreason: reason,
