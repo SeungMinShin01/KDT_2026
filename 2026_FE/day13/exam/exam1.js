@@ -54,3 +54,4 @@ console.log(회원객체);
 
 // JS는 브라우저가 F5(새로고침) 메모리가 초기화 된다.
 // 그래서 백엔드가 필요하다. 또는 브라우저스토리지 사용
+new URLSearchParams(location.search);
