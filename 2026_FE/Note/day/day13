@@ -1,0 +1,23 @@
+웹 스토리지 : 브라우저 저장소 *문자열 타입*
+    1. 세션스토리지 : sessionStorage 객체 , 브라우저 종료되면 초기화
+    2. 로컬스토리지 : localStorage 객체 , 브라우저 종료되면 유지
+    3. 사용법
+        .setItem( 'key' , value ) : 스토리지에 자료 저장
+        .getItem( 'key' )         : 스토리지에 자료 호출
+        .remove( 'key' )          : 스토리지에 자료 삭제
+    4. JSON( 자바스크립트객체 ) 형변환
+        JSON --> String : JSON.stringify( 객체 )
+        String --> JSON : JSON.parse(문자열)
+
+쿼리스트링 : HTTP 웹주소(경로 / URL)에 매개변수 포함 , *문자열 타입*
+    1. 목적 : 페이지 이동간에 자료 전달
+    2. 사용법
+        - URL ? 매개변수명 = 값 & 매개변수명 = 값
+        - new URLSearchParams( location.search ).get('매개변수명' ) : URL 존재하는 매개변수값 호출
+
+페이지전환
+    1. HTML : <a href="URL">링크 1 </a>
+    2. JS   : location.href= "URL"
+
+인터벌 : 특정한 주기(시간)에 따른 함수 반복 실행
+    1. 사용처 : 타이머(시계, 인증시간 등) , CSS( 이미지슬라이드 )
