@@ -1,0 +1,57 @@
+/*
+ position
+*/
+
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: yellow;
+  border: 1px solid red;
+}
+
+.box2 {
+  /* 요소 배치/위치 : static(기본값) 정적, 위치 변경 불가능 */
+  position: static;
+  left: 50px;
+}
+
+.box3 {
+  position: relative; /* relative 상대 위치 */
+  top: 50px; /* 위에서부터 아래로 50px 이동 */
+  left: 50px;
+  z-index: -999;
+}
+
+.box4 {
+  position: absolute; /* 절대위치 */
+  top: 50px;
+  left: 50px;
+}
+
+.box5 {
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+}
+
+.parent {
+  position: relative;
+}
+.box6 {
+  position: absolute; /* 위치 기준은 가장 가까운 position 상위요소 */
+  top: 30px;
+  left: 30px;
+}
+
+.header {
+  display: flex;
+  background-color: #b0ffe5;
+  position: sticky; /* 화면에서 벗어나면 */
+  border: 1px solid red;
+  top: 70px;
+  z-index: -1;
+}
+
+.header > ul {
+  display: flex;
+}
