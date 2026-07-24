@@ -1,0 +1,41 @@
+* {
+  border: 1px solid red;
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  font-size: 12px;
+}
+li {
+  list-style-type: none;
+}
+
+#header {
+  width: 100%;
+  display: contents;
+  /* display: contents : 박스를 생성하지않고, 자식요소만 존재하는것처럼 만듬
+  sticky 사용하기 위해서 사용됨*/
+}
+
+#content {
+  width: 1600px;
+  margin: 0 auto;
+}
+
+#footer {
+  width: 100%;
+}
+
+/* ========================1. 상단메뉴 ==========================*/
+#topMenu {
+  display: flex;
+  justify-content: flex-end;
+  border-bottom: 1px solid #dbdbdb;
+}
+
+#topMenu > li > span {
+  padding: 0px 15px;
+}
+#topMenu > li img {
+  width: 20px;
+  margin: 2px 20px 0px 0px;
+}

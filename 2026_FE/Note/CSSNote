@@ -1,0 +1,126 @@
+1.  CSS 선택자
+    1.  -        : 전체 선택자( 공통 css적용 )
+    2.  마크업명 : 마크업 선택자
+    3.  클래스 : 클래스 선택자(복수)
+    4.  #아이디 : 아이디 선택자(단일)
+    - 만일 속성이 중복일 때 우선순위
+      - #id > .class > 마크업명 > \*
+      - 그 외 중복일때는 코드작성순으로 마지막 코드의 속성이 적용
+
+2.  CSS 텍스트 속성
+    1. font-family : 글꼴
+       - 무료 한글 폰트 : https://noonnu.cc
+       - 무료 영문 폰트 : https://fonts.google.com
+    2. font-size : 글자크기, px단위
+    3. font-style : italic 등 글꼴 기울기
+    4. font-weight : bold; 글꼴 진하게
+    5. color : 글꼴 색상 (1. 색상명, 2. RGB , 3. 헥스코드(16진수))
+       - color : green;
+       - color : rgb( 140, 200, 100 );
+       - color : #fff
+    6. word-spacing : 단어 간격, 어간
+    7. letter-spacing : 글자 간격, 자간
+    8. line-height : 줄 간격, % 단위
+    9. text-align : 텍스트 가로 정렬
+    10. text-decoration : 텍스트 선긋기 : underline(밑줄) , overline(윗줄),
+        line-through(취소선)
+    11. text-shadow : 텍스트 그림자 : x축, y축 흐림정도 색상
+        x축 y축 흐림 색상
+        text-shadow: 0px 0px 5px red;
+
+3.  CSS box 속성
+    1. border : 테두리
+       - 테두리(순서상관없음) : 선종류 굵기 색상
+    2. border-radius : 둥근 모서리
+    3. box-shadow : 그림자
+       - 그림자 : x축 y축 흐림정도 색상
+    4. width : 가로 사이즈 (px, %, vh, vw)
+    5. height : 세로 사이즈 (px, %, vh, vw)
+    6. padding : 안쪽 여백
+    7. margin : 바깥 여백
+       - margin: 0 auto;: 가로 가운데 정렬
+    8. backgroud-color : 배경색상
+
+4.  CSS display 속성
+    1. display
+       - 1. inline : 한 줄에 해당 구역 포함 \*크기고정 불가능 <span>, <a>, <img />
+       - 2. block : 한 줄 차지 구역 \*크기조정 가능, <div>, <h>
+       - 3. inline-block: 한줄에 해당 구역 포함 하면서 \*크기조정 가능, <input />
+       - 4. none : 표시안함
+       - 5. flex : 하위 요소 들의 배치 방법
+
+    2. box-sizing
+       - content-box : 구역크기를 컨텐츠 기준(생략시 기본값)
+       - border-box : 구역크기를 컨텐츠와 안쪽여벽을 포함해서 기준
+
+5.  CSS flex 속성 : 하위 요소들의 배치 방법
+    1. flex-wrap
+       - nowrap : (기본값) 하위 요소들의 크기가 더 크면 자동으로 크기 크기맞춤
+       - wrap : 하위 요소들의 크기가 더 크면 자동으로 줄바꿈
+    2. flex-direction
+       - row : (기본값) 하위 요소들의 가로 방향 배치
+       - column : 하위 요소들의 세로 방향 배치
+    3. justify-content
+       - flex-start : (기본값) 가로 왼쪽 정렬
+       - flex-end : 가로 오른쪽 정렬
+       - center : 가로 가운데 정렬
+       - space-between : 양쪽 여백끝에 여백없이 사이 여백 균등 정렬
+       - space-around : 양쪽 여백끝에 사이여백 50%하고 사이여백 균등 정렬
+         | 반칸 [1] 한칸 [2] 한칸 [3] 반칸 |
+         | 1- 반칸 [1] 1 - 반칸 + 반칸 - 2 [2] 2 - 반칸 + 반칸 - 3 [3] 3 - 반칸 |
+       - space-evenly : 양쪽 여백과 사이여백 균등 정렬
+         | [1] [2] [3] |
+    4. align-items
+       - stretch : (기본값) 하위 요소들의 세로크기가 고정이 아니면 자동으로 부모
+         세로크기만큼 늘어남
+       - center : 세로 가운데 정렬
+       - flex-end : 세로 밑변 정렬
+       - flex-start : 세로 윗변 정렬
+    5. gap ( 요소 간 간격 )
+       - gap:[value] : 행과 열의 간격을 동일하게 설정
+       - gap:[row][column] : 행과 열의 간격을 다르게 설정
+6.  layout
+<header>
+<nav>
+<aside> <section>
+        <footer>
+
+7.  px % rem vm/vh 단위
+    - px : 절대 단위 화면을 구성하는 가장 작은 점(픽셀) 하나 기준
+    - % : 자신이 속한 직계 부모 요소 크기 기준 (부모의 너비 기준)
+    - rem : 부모가 누구든 상관없이, 웹 문서의 뿌리가 되는 <html> 태그의
+      font-size만을 기준으로 비례하는 상대 단위
+    - vw&vh : 브라우저 창의 실제 전체 크기 기준
+      100vw = 브라우저 가로 폭 전체 100vh = 브라우저 화면 세로 폭 전체
+
+8.  CSS position 속성
+    1. position : static (기본값)
+       - 의미 : 정적인 위치(기본 상태)
+       - 배치 기준 : HTML 코드 작성 순서
+       - 특징 : top / left / right / botton 사용 불가
+
+    2. position : relative (상대위치)
+       - 의미 : 자기 자신 기준 상대 위치
+       - 배치 기준 : 원래 있던 위치
+       - 특징 : top / left / right / bottom 사용 가능
+       - 이동 개념 : top : 위에서 아래로, left : 왼쪽에서 오른쪽
+
+         top: 20px; -> 위쪽에 20px 공간을 만들어서 아래로 이동
+         left: 30px; -> 왼쪽에서 30px 공간을 만들어서 오른쪽으로 이동
+         right: 20px; -> 오른쪽에 20px 공간을 만들어서 왼쪽으로 이동
+         bottom: 10px; -> 아래쪽에 20px 공간을 만들어서 위로 이동
+
+    3. position : absolute (절대위치)
+       - 의미 : 절대적인 위치 지정
+       - 배치 기준 : 가장 가까운 position: relative/absolute/fixed를 가진 상위 요소.
+         없음 body(문서 전체) 기준
+       - 특징 : 문서 흐름에서 제거됨(자리 차지 X), top / left /right / bottom 사용 가능
+
+    4. position : fixed (고정 위치)
+       - 의미 : 화면에 고정된 위치
+       - 배치 기준 : 브라우저 화면 (Viewport )
+       - 특징 : 스크롤해도 위치가 변하지 않음, top / left /right / bottom 사용 가능
+
+    5. position : absolute + 부모 relative 조합 (중요 패턴)
+       - 의미 : 특정 영역 안에서만 절대 위치 지정
+       - 규칙 : 부모 -> position: relative, 자식 -> position: absolute
