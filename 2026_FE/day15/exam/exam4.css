@@ -1,0 +1,37 @@
+.box {
+  border: 1px solid red;
+}
+
+.back1 {
+  background-color: blue;
+  background-color: rgb(0, 0, 255);
+  background-color: rgba(0, 0, 255, 0.5);
+  background-color: #0000ff1c;
+}
+
+.back2 {
+  background-image: url(../assets/배경.jpg);
+  background-repeat: no-repeat; /* 채우기 없음 */
+  background-position: bottom;
+}
+
+.back3 {
+  background-image: url("../assets/패턴.jpg");
+  background-repeat: repeat-x;
+}
+
+.back4 {
+  background-image: url(../assets/배경.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+/* 아이콘1개 (이미지1개) 이므로 여러 아이콘들을 호출하는 것보다
+   아이콘들을 하나의 이미지에 모아두고 사용하는 예제 */
+.box2 {
+  width: 100px;
+  height: 100px;
+  background-repeat: no-repeat;
+  background-position: 10px 10px;
+}
