@@ -1,0 +1,5 @@
+- text-align - 하위의 텍스트만 정렬 요소 정렬 X << a태그가 있었기에 정렬이 안됐다.
+
+- row -> align-items (세로) justify-content (가로)
+
+- position 부모가 static을 제외하면 하위요소가 absolute로 부모 기준으로 위치를 잡는다.
