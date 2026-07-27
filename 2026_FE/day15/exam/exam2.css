@@ -1,0 +1,49 @@
+.box {
+  padding: 10px;
+  margin-bottom: 100px;
+  border: 1px red solid;
+}
+
+.size1 {
+  width: 200px;
+  height: 200px;
+}
+
+.size2 {
+  min-width: 600px;
+  /* 최소 가로사이즈 설정 : 만일 600px보다 작아지면 고정 */
+}
+
+.size3 {
+  max-width: 600px;
+  /* 최대 가로사이즈 설정 : 만일 600px보다 커지면 고정 */
+}
+
+/* 하위 요소들이 컨텐츠(이미지/텍스트) 넘쳤을때 */
+.size4 {
+  width: 200px;
+  height: 50px;
+  overflow: visible;
+  /* visible(기본값) 그대로 보여줌 */
+}
+
+.size5 {
+  width: 200px;
+  height: 50px;
+  overflow: hidden;
+  /* hidden 넘치는 부분 숨김 */
+}
+
+.size6 {
+  width: 200px;
+  height: 50px;
+  overflow: scroll;
+  /* scroll 스크롤 표시 */
+}
+.size7 {
+  width: 200px;
+  height: 50px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  /* scroll 스크롤 표시 */
+}

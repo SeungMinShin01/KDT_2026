@@ -1,0 +1,44 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  font-size: 12px;
+}
+li {
+  list-style-type: none;
+}
+
+:root {
+  /* 대표 색상 */
+  --color-primary: #3182f6;
+  --color-primary-hover: #1b64da;
+  --color-primary-active: #1554b8;
+
+  /* 보조 색상 */
+  --color-secondary: #8b5cf6;
+  --color-secondary-hover: #7c3aed;
+
+  /* 강조 색상 */
+  --color-accent: #ffb020;
+
+  /* 배경 */
+  --color-background: #ffffff;
+  --color-surface: #f2f4f6;
+  --color-surface-hover: #e5e8eb;
+
+  /* 글자 */
+  --color-text-primary: #191f28;
+  --color-text-secondary: #6b7684;
+  --color-text-disabled: #adb5bd;
+  --color-text-inverse: #ffffff;
+
+  /* 테두리 */
+  --color-border: #e5e8eb;
+  --color-border-focus: #3182f6;
+
+  /* 상태 */
+  --color-success: #00a76f;
+  --color-warning: #f59f00;
+  --color-danger: #f04452;
+  --color-info: #3182f6;
+}

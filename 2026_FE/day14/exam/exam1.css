@@ -55,3 +55,22 @@
 .header > ul {
   display: flex;
 }
+
+.speech {
+  position: relative;
+  width: 150px;
+  padding: 15px;
+  background-color: #eee;
+  border-radius: 10px;
+}
+
+.speech::after {
+  content: "";
+  position: absolute;
+  left: 20px;
+  bottom: -10px;
+
+  border-top: 10px solid #eee;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+}
