@@ -60,6 +60,16 @@ public class practice1 {
         char 성별 = scan.next().charAt(0);
         System.out.printf("입력하신 성별은 %s 입니다.", 성별);
 
+        //11번
+        System.out.println("이름:");
+        String name2 = scan.next();
+        System.out.println("나이:");
+        int age3 = scan.nextInt();
+        System.out.println("키:");
+        double height2 = scan.nextDouble();
+        System.out.println("프로그래머입니까? (true/false)");
+        boolean programmer = scan.nextBoolean();
+        System.out.printf("이름: %s \n 나이: %d\n 키: %.2f \n 프로그래머 여부 : %b \n", name2, age3, height2, programmer);
 
     }
 }
