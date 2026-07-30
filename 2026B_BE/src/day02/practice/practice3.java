@@ -114,9 +114,17 @@ public class practice3 {
         System.out.printf("결과:%s\n", "admin".equals(Id2) || "admin@test.com".equals(email) ? "관리자" : "일반 사용자" );
 
         //[15번]
+        /*[문제 15] Scanner를 이용해 100점 만점의 점수(int)를 입력받아, 점수에 따라 아래와 같이 등급을 부여하고 출력하시오.
+            90점 이상: 'A'
+            80점 이상 90점 미만: 'B'
+            80점 미만: 'C'
+            입력 예시:
+            점수를 입력하세요: 88
+            출력 예시:
+            등급:B */
         System.out.println("점수를 입력하세요:");
         int score3 = scan.nextInt();
-        System.out.printf("등급: %c\n", score3>=90 && score3 < 100 ? 'A' : score3 >= 80 && score3 < 90 ? 'B' : 'C');
+        System.out.printf("등급: %c\n", score3>=90 && score3 <= 100 ? 'A' : score3 >= 80 && score3 < 90 ? 'B' : 'C');
 
         // [16번]
         System.out.println("나이를 입력하세요:");
