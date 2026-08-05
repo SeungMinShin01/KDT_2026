@@ -5,22 +5,22 @@ import java.util.Scanner;
 public class pracitce1 {
     public static void main(String[] args) {
         // practice7 문제
-        // // 1번
-        // Book b1 = new Book();
-        // Book b2 = new Book();
+        // 1번
+        Book b1 = new Book();
+        Book b2 = new Book();
 
-        // b1.title = "이것이 자바다";
-        // b1.author = "신용권";
-        // b1.price = 300000;
-        // b2.title = "자바의 정석";
-        // b2.author = "남궁성";
-        // b2.price = 28000;
-        // System.out.println(b1.title);
-        // System.out.println(b1.author);
-        // System.out.println(b1.price);
-        // System.out.println(b2.title);
-        // System.out.println(b2.author);
-        // System.out.println(b2.price);
+        b1.title = "이것이 자바다";
+        b1.author = "신용권";
+        b1.price = 300000;
+        b2.title = "자바의 정석";
+        b2.author = "남궁성";
+        b2.price = 28000;
+        System.out.println(b1.title);
+        System.out.println(b1.author);
+        System.out.println(b1.price);
+        System.out.println(b2.title);
+        System.out.println(b2.author);
+        System.out.println(b2.price);
 
         // 2번
         Pet p1 = new Pet();
