@@ -70,3 +70,31 @@ CREATE TABLE test4 (
         ON DELETE CASCADE
         ON UPDATE CASCADE;
 )
+
+
+# 에제1 회원제 게시판 서비스 -----------------------------------------------------------#
+# 1) 데이터베이스 삭제.
+
+DROP DATABASE IF EXISTS BOARDSERVICE;
+CREATE DATABASE BOARDSERVICE;
+
+USE BOARDSERVICE;
+CREATE TABLE MEMBER(
+    MNO INT AUTO_INCREMENT,
+    CONSTRAINT PRIMARY KEY(MNO),
+    MID VARCHAR(30) NOT NULL UNIQUE , -- 회원아이디 이면서 최대 30글자, 공백불가능 , 중복 불가능 설정
+    MPWD VARCHAR(20) NOT NULL,        -- 회원비밀번호 이면서 최대 20글자 , 공백 불가능, 중복 가능 설정
+    MNAME VARCHAR(10) NOT NULL,       -- 회원닉네임(이름)
+    MDATE DATETIME DEFAULT now();     -- 회원가입 날짜/시간 기본값 현재시간 기준 
+);
+
+CREATE TABLE BOARD(
+    BNO INT AUTO_INCREMENT,
+    CONSTRAINT PRIMARY KEY(BNO) ,     -- 게시물번호 PK 설정 * 테이블1개당 PK 1개이상 권장 *
+    BTITLE VARCHAR(255),              -- 게시물 제목
+    BCONTENT LONHTEXT,                -- 게시물 내용, 대용량(사진) 포함한 최대 4G까지
+    BDATE DATETIME DEFAULT now(),     -- 게시물 작성일
+    BVIEW INT DEFAULT 0   ,           -- 조회수
+    MNO INT ,                         -- 작성자( MID/회원아이디 가 아니고 MNO/회원번호)
+    CONSTRAINT FOREIGN KEY (MNO) REFERENCES MEMBER(MNO),
+)
