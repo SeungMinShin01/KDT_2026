@@ -1,5 +1,7 @@
 package day05.practice;
 
+import java.util.Scanner;
+
 public class pracitce1 {
     public static void main(String[] args) {
         // practice7 문제
@@ -60,6 +62,76 @@ public class pracitce1 {
 
         } else
             System.out.println(pd2.name);
+
+        // 6번
+        Member m1 = new Member();
+        m1.id = "admin";
+        m1.isLogin = false;
+
+        System.out.printf("로그인 전 상태: %b\n", m1.isLogin);
+        System.out.printf("로그인 후 상태 : %b\n", !m1.isLogin);
+
+        // 7번
+        Television t1 = new Television();
+        t1.channel = 7;
+        t1.volume = 20;
+
+        t1.channel = 11;
+        t1.volume -= 2;
+        System.out.printf("채널 : %d 볼륨 : %d\n", t1.channel, t1.volume);
+
+        // 8번
+        Player pl1 = new Player();
+        Player pl2 = new Player();
+
+        pl1.name = "손흥민";
+        pl1.power = 90;
+        pl1.speed = 95;
+
+        pl2.name = "이강인";
+        pl2.power = 85;
+        pl2.speed = 92;
+
+        System.out.printf("%s\n", pl1.power + pl1.speed > pl2.power + pl2.speed ? pl1.name : pl2.name);
+
+        // 9번
+        Menulltem mi1 = new Menulltem();
+        Menulltem mi2 = new Menulltem();
+        Menulltem mi3 = new Menulltem();
+
+        mi1.name = "김치찌개";
+        mi1.price = 8000;
+        mi1.isSignature = true;
+
+        mi2.name = "된장찌개";
+        mi2.price = 8000;
+        mi2.isSignature = false;
+
+        mi3.name = "계란찜";
+        mi3.price = 3000;
+        mi3.isSignature = false;
+
+        if (mi1.isSignature == true) {
+            System.out.printf("%s %d %b\n", mi1.name, mi1.price, mi1.isSignature);
+        }
+        if (mi2.isSignature == true) {
+            System.out.printf("%s %d %b", mi2.name, mi2.price, mi2.isSignature);
+        }
+        if (mi3.isSignature == true) {
+            System.out.printf("%s %d %b", mi3.name, mi3.price, mi3.isSignature);
+        }
+
+        Scanner scan = new Scanner(System.in);
+        UserProfile u1 = new UserProfile();
+        System.out.println("이름 입력");
+        u1.name = scan.next();
+        System.out.println("나이 입력");
+        u1.age = scan.nextInt();
+        System.out.println("mbti 입력");
+        u1.mbti = scan.next();
+
+        System.out.printf("--- 프로필 --- \n 이름 : %s ,나이 : %d , MBTI : %s", u1.name, u1.age, u1.mbti);
+
     }
 
 }
@@ -87,51 +159,35 @@ class BankAccount {
     int balance;
 }
 
-/*
- * [문제 5] Product 클래스를 만드세요. name(문자열)과 price(정수) 멤버 변수를 가집니다.
- * 1. main 함수에서 Product 객체 2개를 생성하고, 각각 "새우깡", 1500과 "콜라", 2000 정보를 저장하세요.
- * 2. if문을 사용하여 두 객체의 price를 비교하고, 더 비싼 상품의 이름을 출력하세요.
- */
 class Product {
     String name;
     int price;
 }
 
-/*
- * [문제 6] Member 클래스를 만드세요. id(문자열)와 isLogin(boolean) 멤버 변수를 가집니다.
- * 1. main 함수에서 Member 객체를 하나 생성하고, 아이디는 "admin", isLogin은 false로 초기화하세요.
- * 2. "로그인 전 상태: [isLogin 값]"을 출력하세요.
- * 3. 객체의 isLogin 값을 true로 변경하여 로그인 상황을 구현하세요.
- * 4. "로그인 후 상태: [isLogin 값]"을 출력하세요.
- */
+class Member {
+    String id;
+    boolean isLogin;
+}
 
-/*
- * [문제 7] Television 클래스를 만드세요. channel(정수)과 volume(정수) 멤버 변수를 가집니다.
- * 1. main 함수에서 Television 객체를 생성하고, channel은 7, volume은 20으로 초기화하세요.
- * 2. 객체의 channel 값을 11로 변경하고, volume 값은 2 감소시킨 뒤, 변경된 채널과 볼륨을 출력하세요.
- */
+class Television {
+    int channel;
+    int volume;
+}
 
-/*
- * [문제 8] Player 클래스를 만드세요. name(문자열), power(정수), speed(정수) 멤버 변수를 가집니다.
- * 1. main 함수에서 Player 객체 2개를 생성하세요.
- * 2. 첫 번째 객체에는 "손흥민", 90, 95를, 두 번째 객체에는 "이강인", 85, 92를 각각 저장하세요.
- * 3. 두 객체의 power와 speed의 합을 각각 계산하고, 합이 더 높은 선수의 이름을 출력하세요.
- */
+class Player {
+    String name;
+    int power;
+    int speed;
+}
 
-/*
- * [문제 9] MenuItem 클래스를 만드세요. name(문자열), price(정수), isSignature(boolean, 대표메뉴
- * 여부) 멤버 변수를 가집니다.
- * 1. main 함수에서 MenuItem 객체 3개를 생성하고, 첫 번째는 "김치찌개", 8000, true, 두 번째는 "된장찌개",
- * 8000, false, 세 번째는 "계란찜", 3000, false로 저장하세요.
- * 2. if문을 사용하여 isSignature가 true인 메뉴 객체를 찾아, "[대표메뉴] [메뉴이름] : [가격]원" 형식으로
- * 출력하세요.
- */
+class Menulltem {
+    String name;
+    int price;
+    boolean isSignature;
+}
 
-/*
- * [문제 10] UserProfile 클래스를 만드세요. name(문자열), age(정수), mbti(문자열) 멤버 변수를 가집니다.
- * 1. main 함수에서 UserProfile 객체를 하나 생성하세요.
- * 2. Scanner를 사용하여 사용자로부터 이름, 나이, MBTI를 순서대로 입력받으세요.
- * 3. 입력받은 값들을 생성된 객체의 각 멤버 변수에 저장하세요.
- * 3. 모든 정보가 저장된 객체의 멤버 변수들을 가져와 "--- 프로필 ---", "이름: [이름]", "나이: [나이]",
- * "MBTI: [MBTI]" 형식으로 출력하세요.
- */
+class UserProfile {
+    String name;
+    int age;
+    String mbti;
+}
