@@ -1,0 +1,14 @@
+package day08.exam.package1;
+
+public class A {
+    public int 공개변수;
+    private int 비공개변수;
+    int 일반변수;
+
+    public void 공개메소드() {
+    }
+
+    private void 비공개메소드() {
+    }
+
+}
