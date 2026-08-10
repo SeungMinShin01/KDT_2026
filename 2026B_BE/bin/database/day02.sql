@@ -98,3 +98,4 @@ CREATE TABLE BOARD(
     MNO INT ,                         -- 작성자( MID/회원아이디 가 아니고 MNO/회원번호)
     CONSTRAINT FOREIGN KEY (MNO) REFERENCES MEMBER(MNO),
 )
+
