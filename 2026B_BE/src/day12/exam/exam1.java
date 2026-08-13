@@ -1,5 +1,6 @@
 package day12.exam;
 
+import java.sql.DriverManager;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -68,6 +69,7 @@ public class exam1 {
             method1(); // 예외가 반환, 일반예외란?
         } catch (Exception e) {
             System.out.println("메소드 예외발생" + e);
+
         }
     }
 
