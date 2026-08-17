@@ -38,19 +38,41 @@ INSERT INTO stock(재고수량, 제품번호_fk) VALUES (10, 1), (5, 2), (20, 3)
 
 
 -- [문제 1] 모든 제품의 제품명과 해당 제품의 카테고리명을 함께 조회하세요. 
+SELECT 제품명, 카테고리명 FROM PRODUCT P1 JOIN  PCATEGORY C1 ON P1.카테고리번호_FK = C1.카테고리번호_PK;
+
 
 -- [문제 2] '노트북' 카테고리에 속하는 모든 제품의 제품명과 제품가격을 조회하세요. 
+SELECT 제품명, 제품가격 FROM PRODUCT P JOIN PCATEGORY C ON P.카테고리번호_FK = C.카테고리번호_PK 
+    WHERE C.카테고리명 = '노트북';
 
 -- [문제 3] 모든 제품의 제품명과 등록된 재고수량을 함께 조회하세요. 
+SELECT 제품명, 재고수량 FROM PRODUCT P JOIN STOCK S ON P.제품번호_PK = S.제품번호_FK;
 
 -- [문제 4] '그램 15인치' 제품의 모든 재고등록날짜와 재고수량을 조회하세요.
+SELECT 재고등록날짜, 재고수량 FROM STOCK S JOIN PRODUCT P ON S.제품번호_FK = P.제품번호_PK
+    WHERE P.제품명 = '그램 15인치';
 
 -- [문제 5] 모든 제품의 제품명, 카테고리명, 재고수량을 한 번에 조회하세요. (3개 테이블 조인)
+SELECT 제품명, 카테고리명, 재고수량 FROM PRODUCT P 
+    JOIN PCATEGORY C ON P.카테고리번호_FK = C.카테고리번호_PK
+    JOIN STOCK S ON P.제품번호_PK = S.제품번호_FK;
 
--- [문제 6] 모든 카테고리의 카테고리명과 해당 카테고리에 속한 제품명을 조회하세요. 만약 카테고리에 속한 제품이 없더라도 카테고리명은 모두 표시되도록 하세요. 
-
+-- [문제 6] 모든 카테고리의 카테고리명과 해당 카테고리에 속한 제품명을 조회하세요. 
+-- 만약 카테고리에 속한 제품이 없더라도 카테고리명은 모두 표시되도록 하세요. 
+SELECT 카테고리명, 제품명 FROM PCATEGORY C
+    LEFT JOIN PRODUCT P ON P.카테고리번호_FK = C.카테고리번호_PK;
+    
 -- [문제 7] 재고가 한 번도 등록되지 않은 제품의 제품명을 조회하세요. 
+SELECT 제품명 FROM PRODUCT P
+    LEFT JOIN STOCK S ON P.제품번호_PK = S.제품번호_FK
+    WHERE S.제품번호_FK IS NULL;
+
 
 -- [문제 8] 각 카테고리별로 총 재고 수량의 합계를 카테고리명과 함께 조회하세요. 
+SELECT 카테고리명, SUM(재고수량) FROM pcategory c
+    JOIN product p ON c.카테고리번호_pk = p.카테고리번호_fk
+    JOIN stock s ON p.제품번호_pk = s.제품번호_fk
+    GROUP BY c.카테고리명;
 
--- [문제 9] 각 제품별로 총 재고 수량을 조회하고, 총 재고 수량이 많은 순서대로 정렬하여 제품명과 총재고수량을 표시하세요. 
+-- [문제 9] 각 제품별로 총 재고 수량을 조회하고, 총 재고 수량이 많은 순서대로 정렬하여 
+-- 제품명과 총재고수량을 표시하세요. 
