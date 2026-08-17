@@ -2,7 +2,7 @@ package day10.pracitce;
 
 import java.util.ArrayList;
 
-public class practice10 {
+public class practice12 {
     public static void main(String[] args) {
         // [1번]
         Student s1 = new Student("유재석", 100);
@@ -29,7 +29,39 @@ public class practice10 {
 
         // [6번]
         Vehicle vehicle = new Bus();
+        if (vehicle instanceof Bus) {
+            Bus bus = (Bus) vehicle;
+            bus.checkFare();
+        }
 
+        // [7번]
+        Beverage[] beverages = new Beverage[2];
+        beverages[0] = new Coke();
+        beverages[1] = new Coffee();
+        for (Beverage b1 : beverages) {
+            b1.drink();
+        }
+
+        // [8번]
+        Character character = new Character();
+        Sword sword = new Sword();
+        Gun gun = new Gun();
+        character.use(sword);
+        character.use(gun);
+
+        // [9번]
+        SuperClass obj = new SubClass();
+        System.out.println(obj.name);
+        obj.method();
+        // obj의 타입은 SuperClass로 선언됐으므로 obj.name은 상위가 출력되고,
+        // obj.method()는 SubClass로 인해 오버라이딩 됐으므로 "하위 메소드 출력"이 출력된다.
+
+        // [10번]
+        Laptop laptop = new Laptop();
+        System.out.println(laptop instanceof Laptop); // true
+        System.out.println(laptop instanceof Electronic); // true
+        System.out.println(laptop instanceof Device); // true
+        // laptop -> Electronic -> Device
     }
 
 }
@@ -138,4 +170,60 @@ class Coffee extends Beverage {
     public void drink() {
         System.out.println("커피를 마십니다.");
     }
+}
+
+class Weapon {
+    public void attack() {
+        System.out.println("무기로 공격합니다.");
+    }
+}
+
+class Sword extends Weapon {
+    @Override
+    public void attack() {
+        System.out.println("검으로 공격합니다.");
+    }
+
+}
+
+class Gun extends Weapon {
+    @Override
+    public void attack() {
+        System.out.println("총으로 공격합니다.");
+    }
+}
+
+class Character {
+    public void use(Weapon weapon) {
+        weapon.attack();
+    }
+}
+
+class SuperClass {
+    String name = "상위";
+
+    public void method() {
+        System.out.println("상위 메소드 출력");
+    }
+}
+
+class SubClass extends SuperClass {
+    String name = "하위";
+
+    @Override
+    public void method() {
+        System.out.println("하위 메소드 출력");
+    }
+}
+
+class Device {
+
+}
+
+class Electronic extends Device {
+
+}
+
+class Laptop extends Electronic {
+
 }
