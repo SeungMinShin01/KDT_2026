@@ -1,11 +1,14 @@
 package day09.practice;
 
 import java.util.ArrayList;
+import java.util.Scanner;
 
 import javax.print.DocFlavor.STRING;
 
 public class practice11 {
     public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+
         // 1번
         ArrayList<String> nameList = new ArrayList<>();
         nameList.add("유재석");
@@ -40,7 +43,9 @@ public class practice11 {
         // 5번
         ArrayList<String> list2 = new ArrayList<>();
         list2.add("자바");
-        list2.add("자바스크립트");
+        list2.add("파이썬");
+        list2.add("C++");
+        list2.add(1, "자바스크립트");
         System.out.println(list2);
 
         // 6번
@@ -51,6 +56,29 @@ public class practice11 {
         for (Book book : bookList) {
             System.out.println(book.getTitle() + " : " + book.getAuthor());
         }
+
+        // 7번
+        ArrayList<String> strList = new ArrayList<>();
+        for (;;) {
+            System.out.println("문자열 입력:");
+            String str = scan.next();
+            if (str.equals("종료")) {
+                System.out.println(strList);
+                break;
+            } else {
+                strList.add(str);
+            }
+        }
+
+        // 8번
+        ArrayList<String> list3 = new ArrayList<>();
+        list3.add("국어");
+        list3.add("수학");
+        list3.add("사회");
+        list3.add("과학");
+        System.out.println(list3);
+        list3.set(1, "영어");
+        System.out.println(list3);
     }
 }
 
