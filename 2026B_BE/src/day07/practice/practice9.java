@@ -31,7 +31,12 @@ public class practice9 {
 
         // 6번
         Product pr1 = new Product();
-        System.out.printf("%b\n", pr1.sell(10));
+        if (pr1.sell(10)) {
+            System.out.println(true);
+        } else {
+            System.out.println("재고 부족");
+            System.out.println(false);
+        }
 
         // 7번
         Visualizer v1 = new Visualizer();
