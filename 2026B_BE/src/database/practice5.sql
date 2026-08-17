@@ -76,3 +76,6 @@ SELECT 카테고리명, SUM(재고수량) FROM pcategory c
 
 -- [문제 9] 각 제품별로 총 재고 수량을 조회하고, 총 재고 수량이 많은 순서대로 정렬하여 
 -- 제품명과 총재고수량을 표시하세요. 
+    SELECT 제품명, SUM(재고수량) FROM PRODUCT P
+        JOIN STOCK S ON P.제품번호_PK = S.제품번호_FK
+        GROUP BY 제품명 ORDER BY SUM(재고수량) DESC;
