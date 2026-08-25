@@ -17,6 +17,11 @@ public class exam3 {
          * 1) Runnable 익명구현체 : new Runnable(){ run(); }
          * 2) Runnable 구현체* : class 클래스 implements Runnable{ run() }
          * 3) Thread 상속 : class 클래스 extends Thread{ run () }
+         * 주요 메소드
+         * 1) run() : 추상메소드 이면서 작업(멀티) 스레드가 처리할 코드의 시작점
+         * 2) start() : 구현된 run() 메소드 실행하는 메소드 , 주의할점] Thread 클래스 제공
+         * * 활용처: 1) 톰캣(웹서버/SPRING): 다수의 유저(클라이언트)가 1개의 서버에 요청시 병렬처리 제공
+         * 엔터프라이즈 애플리케이션에 대한 정보 필요
          */
         // [1] 단일(싱글) 스레드 : (컴파일된) 코드들을 실행 흐름 단위 1개일 때
         // -> main 메소드가 main 스레드 제공한다. (프록램당 1개 이상 존재)
