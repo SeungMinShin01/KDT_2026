@@ -1,4 +1,4 @@
-package example.day01;
+package day01;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;

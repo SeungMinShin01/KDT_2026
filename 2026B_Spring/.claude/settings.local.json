@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(./gradlew.bat bootRun --console=plain)",
+      "Bash(tee \"C:/Users/harry/AppData/Local/Temp/claude/c--Users-harry-Desktop-KDT-2026-2026B-Spring/e9f9c603-8627-4e27-896b-b9b85c81341f/scratchpad/bootrun.log\")",
+      "Bash(curl -s -o /dev/null -w \"GET / -> HTTP %{http_code}\\\\n\" http://localhost:8080/)",
+      "Bash(curl -s http://localhost:8080/board)",
+      "Bash(./gradlew.bat --stop)",
+      "Bash(netstat -ano)",
+      "Bash(mysql -u root -p1234 -e \"show databases;\")",
+      "PowerShell($c = Get-ChildItem \"C:\\\\Program Files\\\\MySQL\" -Directory -ErrorAction SilentlyContinue | Select-Object -ExpandProperty Name; if \\($c\\) { $c } else { \"no MySQL dir\" }; $exe = Get-ChildItem \"C:\\\\Program Files\\\\MySQL\" -Recurse -Filter \"mysql.exe\" -ErrorAction SilentlyContinue | Select-Object -First 1 -ExpandProperty FullName; if \\($exe\\) { \"EXE: $exe\"; & $exe -u root -p1234 -e \"show databases;\" } else { \"mysql.exe not found\" })",
+      "PowerShell(Set-Location \"c:\\\\Users\\\\harry\\\\Desktop\\\\KDT_2026\\\\2026B_Spring\\\\springweb\"; .\\\\gradlew.bat compileJava --console=plain -q; \"EXIT=$LASTEXITCODE\")",
+      "Bash(curl -s -X POST http://localhost:8080/board/save -d \"content=클로드가 넣은 글&writer=harry\" --data-urlencode \"\" -w \"\\\\nHTTP %{http_code}\\\\n\")",
+      "Bash(curl -s -X POST http://localhost:8080/board/save -H \"Content-Type: application/x-www-form-urlencoded; charset=UTF-8\" --data-urlencode \"content=클로드가 넣은 글\" --data-urlencode \"writer=harry\" -w \"\\\\nHTTP %{http_code}\\\\n\")"
+    ]
+  }
+}

@@ -17,10 +17,18 @@ repositories {
 	mavenCentral()
 }
 
+// main 메소드를 가진 클래스가 여러 개(SpringwebApplication, AppStart)라서
+// bootRun 으로 실행할 클래스를 직접 지정해준다. day03을 실행할 땐 이 줄을 바꾸면 된다.
+springBoot {
+	mainClass = 'day02.AppStart'
+}
+
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-webmvc'
+	runtimeOnly 'com.mysql:mysql-connector-j'
 	testImplementation 'org.springframework.boot:spring-boot-starter-webmvc-test'
 	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+	
 }
 
 tasks.named('test') {

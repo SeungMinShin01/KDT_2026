@@ -1,0 +1,21 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "day02 AppStart",
+            "request": "launch",
+            "mainClass": "day02.AppStart",
+            "projectName": "springweb",
+            "cwd": "${workspaceFolder}/springweb"
+        },
+        {
+            "type": "java",
+            "name": "SpringwebApplication (기본 생성된 것)",
+            "request": "launch",
+            "mainClass": "com.example.SpringwebApplication",
+            "projectName": "springweb",
+            "cwd": "${workspaceFolder}/springweb"
+        }
+    ]
+}
