@@ -1,21 +1,28 @@
 {
-    "version": "0.2.0",
-    "configurations": [
-        {
-            "type": "java",
-            "name": "day02 AppStart",
-            "request": "launch",
-            "mainClass": "day02.AppStart",
-            "projectName": "springweb",
-            "cwd": "${workspaceFolder}/springweb"
-        },
-        {
-            "type": "java",
-            "name": "SpringwebApplication (기본 생성된 것)",
-            "request": "launch",
-            "mainClass": "com.example.SpringwebApplication",
-            "projectName": "springweb",
-            "cwd": "${workspaceFolder}/springweb"
-        }
-    ]
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "java",
+      "name": "exam1",
+      "request": "launch",
+      "mainClass": "day03.exam.exam1",
+      "projectName": "springweb"
+    },
+    {
+      "type": "java",
+      "name": "day02 AppStart",
+      "request": "launch",
+      "mainClass": "day02.AppStart",
+      "projectName": "springweb",
+      "cwd": "${workspaceFolder}/springweb"
+    },
+    {
+      "type": "java",
+      "name": "SpringwebApplication (기본 생성된 것)",
+      "request": "launch",
+      "mainClass": "com.example.SpringwebApplication",
+      "projectName": "springweb",
+      "cwd": "${workspaceFolder}/springweb"
+    }
+  ]
 }
