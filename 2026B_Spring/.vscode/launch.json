@@ -3,6 +3,35 @@
   "configurations": [
     {
       "type": "java",
+      "name": "AppStart",
+      "request": "launch",
+      "mainClass": "day04.practice2.AppStart",
+      "projectName": "springweb"
+    },
+    {
+      "type": "java",
+      "name": "AppStart",
+      "request": "launch",
+      "mainClass": "day04.Exam.AppStart",
+      "projectName": "springweb"
+    },
+    {
+      "type": "java",
+      "name": "AppStart",
+      "request": "launch",
+      "mainClass": "day04.AppStart",
+      "projectName": "springweb"
+    },
+    {
+      "type": "java",
+      "name": "day03 AppStart",
+      "request": "launch",
+      "mainClass": "day03.exam.AppStart",
+      "projectName": "springweb",
+      "cwd": "${workspaceFolder}/springweb"
+    },
+    {
+      "type": "java",
       "name": "exam1",
       "request": "launch",
       "mainClass": "day03.exam.exam1",
