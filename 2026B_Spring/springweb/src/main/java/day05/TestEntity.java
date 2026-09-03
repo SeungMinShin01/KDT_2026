@@ -21,15 +21,15 @@ import lombok.ToString;
 @Getter
 @Setter
 @ToString
-public class TestEntity {
+public class TestEntity extends BaseTime { // BaseTime 상속: createDate/updateDate 컬럼 물려받기
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer no;
 
     @Column(name = "name", nullable = true, length = 100, unique = true) // 제약조건 설정
-    private Integer no;
     private String name; // 이름
     @Column(columnDefinition = "varchar(100) not null default '제품설명'")
-    private String desc; // 설명
+    private String descri; // 설명
     @Column(insertable = true, updatable = true)
     private Integer price; // 가격
 }
