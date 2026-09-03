@@ -38,6 +38,9 @@ public class TestDto {
                 .build(); // 빌더패턴 끝
     }
 
+    // static 이란? 인스턴스 없이 호출가능 메소드/변수
+    // static 에는 this 없을까? 인스턴스 없이 사용하는 메소드
+    // toEntity는 static이 없고 from은 static이 붙은이유 보강 필요 << 내가 변한다 VS 상대 정보를 변환한다?
     public static TestDto from(TestEntity testEntity) {
         return TestDto.builder()
                 .name(testEntity.getName())
