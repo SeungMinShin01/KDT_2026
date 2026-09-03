@@ -1,7 +1,10 @@
 DROP DATABASE if EXISTS mydb0902;
 create DATABASE mydb0902;
-use mydb0902;
+use mydb090;
 
+DROP DATABASE if EXISTS mydb0903;
+create DATABASE mydb0903;
+use mydb0903;
 create table exam(
     eno Int PRIMARY KEY AUTO_INCREMENT ,
     ename VARCHAR(255)

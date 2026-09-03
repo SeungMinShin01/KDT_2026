@@ -5,6 +5,13 @@
       "type": "java",
       "name": "AppStart",
       "request": "launch",
+      "mainClass": "day05.AppStart",
+      "projectName": "springweb"
+    },
+    {
+      "type": "java",
+      "name": "AppStart",
+      "request": "launch",
       "mainClass": "day04.practice2.AppStart",
       "projectName": "springweb"
     },
