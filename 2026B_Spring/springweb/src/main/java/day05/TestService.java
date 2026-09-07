@@ -1,10 +1,14 @@
 package day05;
 
+import day04.Exam.AppStart;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import jakarta.transaction.Transactional;
 
 @Service
 public class TestService {
@@ -31,7 +35,29 @@ public class TestService {
     public boolean save(TestDto testDto) {
         // 1. dto --> entity 변환함수 : toEntity 함수
         TestEntity testEntity = testDto.toEntity();
+        // 2. entitu save 저장
+        TestEntity saveEntity = testRepository.save(testEntity);
+        // 3. 저장 결과 pk 여부 성공
+        if (saveEntity.getNo() >= 1)
+            return true;
+        return false;
+    }
 
+    // 3. 수정
+    @Transactional
+    public boolean update(TestDto testDto) {
+        // 1. 수정할 엔티티 찾는다. pk
+        Optional<TestEntity> optional = testRepository.findById(testDto.getNo());
+
+        // 2. 찾은 엔티티가 존재하면
+        if (optional.isPresent()) {
+            // 3. 엔티티 꺼낸다.
+            TestEntity entity = optional.get();
+            // 4. setter 메소드 이용한 수정
+            entity.setPrice(testDto.getPrice());
+            entity.setDescri(testDto.getDescri());
+            return true;
+        }
         return false;
     }
 }

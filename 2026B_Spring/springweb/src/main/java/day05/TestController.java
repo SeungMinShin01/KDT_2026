@@ -1,7 +1,12 @@
 package day05;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
@@ -13,5 +18,18 @@ public class TestController {
     @GetMapping("/test")
     public List<TestDto> 전체조회() {
         return testService.findAll();
+    }
+
+    // 2. 등록
+    @PostMapping("/test")
+    public boolean save(@RequestBody TestDto testDto) {
+        return testService.save(testDto);
+    }
+
+    // 3. 수정
+    @PutMapping("/test")
+    public boolean update(
+            @RequestBody TestDto testDto) {
+        return testService.update(testDto);
     }
 }

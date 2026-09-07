@@ -48,6 +48,7 @@ public class TestDto {
                 .price(testEntity.getPrice())
                 .createDate(testEntity.getCreateDate())
                 .updateTime(testEntity.getUpdateDate())
+                .no(testEntity.getNo())
                 .build();
     }
 }
