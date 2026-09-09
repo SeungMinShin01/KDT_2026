@@ -1,7 +1,12 @@
-package day07.practice;
+package day07.practice.model.entity;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -19,15 +24,15 @@ import lombok.ToString;
 @AllArgsConstructor
 @Data
 @Builder
-public class StudentEntity extends  BaseTime{
-    @Id 
+public class StudentEntity extends BaseTime {
+    @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer studentId;
-    @Column 
+    @Column
     private String studentName;
-    
-    @OneToMany (mappedBy = "studentEntity", cascade = CascadeType.ALL , fetch = FetchType.LAZY)
+
+    @OneToMany(mappedBy = "studentEntity", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     @ToString.Exclude
-    @Builder .Default
-    
+    @Builder.Default
+    private List<EnrollEntity> enrollEntities = new ArrayList<>();
 }

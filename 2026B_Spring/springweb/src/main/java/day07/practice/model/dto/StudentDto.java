@@ -1,6 +1,12 @@
-package day07.practice;
+package day07.practice.model.dto;
 
+import java.time.LocalDateTime;
+
+import day07.practice.model.entity.StudentEntity;
+import lombok.AllArgsConstructor;
 import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @NoArgsConstructor
 @AllArgsConstructor

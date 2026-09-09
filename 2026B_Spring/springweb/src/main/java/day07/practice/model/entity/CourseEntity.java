@@ -1,4 +1,4 @@
-package day07.practice;
+package day07.practice.model.entity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -32,7 +32,7 @@ public class CourseEntity extends BaseTime {
     @Column
     private String courseName;
 
-    @OneToMany(mappedBy = "couseEntity", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "courseEntity", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     @ToString.Exclude
     @Builder.Default
     private List<EnrollEntity> enrollEntities = new ArrayList<>();

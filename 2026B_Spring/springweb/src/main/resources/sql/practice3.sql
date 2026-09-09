@@ -6,6 +6,6 @@ insert into movie( title , director , releasedate ,rating , created_date , updat
         values( "영화제목3" , "감독3" , "2026-09-02" , 10 , now() , now() );
 
 
-DROP DATABASE IF EXISTS activity;
-CREATE DATABASE activity;
-USE activity; 
+DROP DATABASE IF EXISTS test5;
+CREATE DATABASE test5;
+USE test5; 

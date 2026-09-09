@@ -5,6 +5,27 @@
       "type": "java",
       "name": "AppStart",
       "request": "launch",
+      "mainClass": "day08.practice5_test.AppStart",
+      "projectName": "springweb"
+    },
+    {
+      "type": "java",
+      "name": "AppStart",
+      "request": "launch",
+      "mainClass": "day07.practice2.AppStart",
+      "projectName": "springweb"
+    },
+    {
+      "type": "java",
+      "name": "AppStart",
+      "request": "launch",
+      "mainClass": "day07.practice.AppStart",
+      "projectName": "springweb"
+    },
+    {
+      "type": "java",
+      "name": "AppStart",
+      "request": "launch",
       "mainClass": "day06.activity.AppStart",
       "projectName": "springweb"
     },
