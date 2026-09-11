@@ -10,5 +10,11 @@ import App from "./App.jsx";
 // 2. 가져온 컴포넌트 렌더링하기
 create.render(<App> </App>);
 // [day01]
-import MyMarkUp from "./example/day01/exam1.jsx";
-create.render(<MyMarkUp></MyMarkUp>);
+// import MyMarkUp from "./example/day01/exam1.jsx";
+// create.render(<MyMarkUp></MyMarkUp>);
+
+// import Component1 from "./example/day01/exam2.jsx";
+// create.render(<Component1></Component1>);
+
+import Component3 from "./example/day01/exam4.jsx";
+create.render(<Component3></Component3>);
