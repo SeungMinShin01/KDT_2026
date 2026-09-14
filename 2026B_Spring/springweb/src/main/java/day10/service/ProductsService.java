@@ -56,7 +56,11 @@ public class ProductsService {
             ProductsEntity productsEntity = optional.get();
             productsEntity.setName(productDto.getName());
             productsEntity.setPrice(productDto.getPrice());
-            productsEntity.getCategoryEntity().setCno(productDto.getCno());
+            Optional<CategoryEntity> optional2 = categoryRepository.findById(productDto.getCno());
+            if (optional2.isPresent()) {
+                productsEntity.setCategoryEntity(optional2.get());
+            } else
+                return false;
             productsRepository.save(productsEntity);
             return true;
         }
