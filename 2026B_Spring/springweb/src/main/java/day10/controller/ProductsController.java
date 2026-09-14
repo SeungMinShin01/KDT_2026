@@ -2,6 +2,7 @@ package day10.controller;
 
 import day10.model.dto.ProductDto;
 import day10.model.dto.ProductResponseDto;
+import day10.model.entity.ProductsEntity;
 import day10.service.ProductsService;
 
 import java.util.List;
@@ -21,9 +22,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("api/products")
 public class ProductsController {
-    private final ProductsService productsService;
     @Autowired
-    private ProductsService produtsService;
+    private ProductsService productsService;
 
     ProductsController(ProductsService productsService) {
         this.productsService = productsService;
@@ -31,12 +31,12 @@ public class ProductsController {
 
     @GetMapping("")
     public List<ProductResponseDto> productFindAll() {
-        return productsService.productFindAll(productDto);
+        return productsService.productFindAll();
     }
 
     @PostMapping("")
-    public boolean productSave(@RequestBody ProductDto productDto) {
-        return productsService.productSave();
+    public ProductDto productSave(@RequestBody ProductDto productDto) {
+        return productsService.productSave(productDto);
     }
 
     @PutMapping("")

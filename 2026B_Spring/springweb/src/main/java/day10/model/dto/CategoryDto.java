@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import day10.model.entity.CategoryEntity;
+import day10.model.entity.ProductsEntity;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -30,6 +31,11 @@ public class CategoryDto {
                 .cno(categoryEntity.getCno())
                 .name(categoryEntity.getName())
                 .build();
+    }
+
+    public static CategoryDto from(ProductsEntity productList) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'from'");
     }
 
 }

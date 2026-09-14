@@ -39,4 +39,9 @@ public class ProductEntity extends BaseTime {
     @ToString.Exclude
     @Builder.Default
     private List<RecipeEntity> recipeList = new ArrayList<>();
+
+    public Integer getBno() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getBno'");
+    }
 }
