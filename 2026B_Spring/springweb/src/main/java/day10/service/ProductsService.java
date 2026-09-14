@@ -1,6 +1,5 @@
 package day10.service;
 
-import java.lang.foreign.Linker.Option;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
@@ -8,34 +7,31 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import day06.activity.ProductEntity;
 import day10.model.dto.ProductResponseDto;
 import day10.model.entity.ProductsEntity;
 import day10.model.repository.ProductsRepository;
-import day10.model.dto.CategoryDto;
 import day10.model.dto.ProductDto;
-import day10.model.entity.CategoryEntity;
 
 @Service
 public class ProductsService {
     @Autowired
     private ProductsRepository productsRepository;
 
+    // 1. 제품 조회
     public List<ProductResponseDto> productFindAll() {
         List<ProductsEntity> productsEntities = productsRepository.findAll();
         List<ProductResponseDto> productResponseDtos = new ArrayList<>();
 
         productsEntities.forEach((productsEntity) -> {
             ProductResponseDto productResponseDto = ProductResponseDto.from(productsEntity);
-            productsEntity.getCategoryEntity().getProductList().forEach((productList) -> {
-                String cName = productList.getName();
-                productResponseDto.setCName(cName);
-            });
+            productResponseDto.setCno(productsEntity.getCategoryEntity().getCno());
+            productResponseDto.setCategoryname(productsEntity.getCategoryEntity().getName());
             productResponseDtos.add(productResponseDto);
         });
         return productResponseDtos;
     }
 
+    // 2. 제품 등록
     public ProductDto productSave(ProductDto productDto) {
         ProductsEntity productsEntity = productDto.toEntity();
         ProductsEntity savedEntity = productsRepository.save(productsEntity);
@@ -44,6 +40,7 @@ public class ProductsService {
         return null;
     }
 
+    // 3. 제품 수정
     public boolean productUpdate(ProductDto productDto) {
         Optional<ProductsEntity> optional = productsRepository.findById(productDto.getBno());
         if (optional.isPresent()) {
@@ -54,9 +51,10 @@ public class ProductsService {
             productsRepository.save(productsEntity);
             return true;
         }
-        return false;s
+        return false;
     }
 
+    // 4. 제품 삭제
     public boolean productDelete(Integer bno) {
         Optional<ProductsEntity> optional = productsRepository.findById(bno);
         if (optional.isPresent()) {
