@@ -7,8 +7,10 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import day10.model.entity.CategoryEntity;
 import day10.model.dto.ProductResponseDto;
 import day10.model.entity.ProductsEntity;
+import day10.model.repository.CategoryRepository;
 import day10.model.repository.ProductsRepository;
 import day10.model.dto.ProductDto;
 
@@ -16,6 +18,8 @@ import day10.model.dto.ProductDto;
 public class ProductsService {
     @Autowired
     private ProductsRepository productsRepository;
+    @Autowired
+    private CategoryRepository categoryRepository;
 
     // 1. 제품 조회
     public List<ProductResponseDto> productFindAll() {
@@ -34,6 +38,11 @@ public class ProductsService {
     // 2. 제품 등록
     public ProductDto productSave(ProductDto productDto) {
         ProductsEntity productsEntity = productDto.toEntity();
+        Optional<CategoryEntity> optional = categoryRepository.findById(productDto.getCno());
+        if (optional.isPresent()) {
+            productsEntity.setCategoryEntity(optional.get());
+        } else
+            return null;
         ProductsEntity savedEntity = productsRepository.save(productsEntity);
         if (savedEntity.getBno() >= 1)
             return productDto;

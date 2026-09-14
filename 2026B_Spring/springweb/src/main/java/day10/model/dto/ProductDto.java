@@ -18,7 +18,6 @@ public class ProductDto {
 
     public ProductsEntity toEntity() {
         return ProductsEntity.builder()
-                .bno(this.bno)
                 .name(this.name)
                 .price(this.price)
                 .build();
