@@ -16,5 +16,6 @@ create.render(<App> </App>);
 // import Component1 from "./example/day01/exam2.jsx";
 // create.render(<Component1></Component1>);
 
-import Component3 from "./example/day01/exam4.jsx";
-create.render(<Component3></Component3>);
+import ProductManager from "./example/day02/practice2/ProductManager.jsx";
+
+create.render(<ProductManager />);
