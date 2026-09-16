@@ -1,5 +1,7 @@
 package day10.model.dto;
 
+import day10.model.entity.ProductsEntity;
+import day10.model.entity.ReviewsEntity;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -15,4 +17,23 @@ public class ReviewsDto {
     private String reviewer;
     private String content;
     private int rating;
+
+    public ReviewsEntity toEntity(ProductsEntity productEntity) {
+        return ReviewsEntity.builder()
+                .reviewer(this.reviewer)
+                .content(this.content)
+                .rating(this.rating)
+                .productEntity(productEntity)
+                .build();
+    }
+
+    public static ReviewsDto from(ReviewsEntity entity) {
+        return ReviewsDto.builder()
+                .rno(entity.getRno())
+                .bno(entity.getProductEntity().getBno())
+                .reviewer(entity.getReviewer())
+                .content(entity.getContent())
+                .rating(entity.getRating())
+                .build();
+    }
 }

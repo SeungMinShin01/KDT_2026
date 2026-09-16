@@ -1,0 +1,15 @@
+.inputBox {
+  padding: 5px;
+  margin-right: 15px;
+  border-radius: 8px;
+
+  border: solid 1px #858585;
+}
+
+.submitBtn {
+  padding: 5px;
+  border-radius: 5px;
+  border: solid 1px #858585;
+  background-color: #f0f0f0;
+  width: 40px;
+}

@@ -6,9 +6,9 @@ const root = document.querySelector("#root");
 const create = createRoot(root);
 // [선택] 최초로 화면을 그리기 할 컴포넌트 가져와서 렌더링
 // 1. import 이용하여 컴포넌트 가져온다.
-import App from "./App.jsx";
+// import App from "./App.jsx";
 // 2. 가져온 컴포넌트 렌더링하기
-create.render(<App> </App>);
+// create.render(<App> </App>);
 // [day01]
 // import MyMarkUp from "./example/day01/exam1.jsx";
 // create.render(<MyMarkUp></MyMarkUp>);
@@ -16,6 +16,14 @@ create.render(<App> </App>);
 // import Component1 from "./example/day01/exam2.jsx";
 // create.render(<Component1></Component1>);
 
-import ProductManager from "./example/day02/practice2/ProductManager.jsx";
+// import ProductManager from "./example/day02/practice2/ProductManager.jsx";
+// create.render(<ProductManager />);
 
-create.render(<ProductManager />);
+// [day04] Routes/Route 는 Router 컨텍스트 안에서만 동작하므로 BrowserRouter 로 감싼다.
+import { BrowserRouter } from "react-router-dom";
+import App3 from "./example/day04/practice/App";
+create.render(
+  <BrowserRouter>
+    <App3></App3>
+  </BrowserRouter>,
+);
