@@ -5,7 +5,7 @@ export default function Practice2(props) {
   const [myJSON, setMyJSON] = useState([]);
   useEffect(async function () {
     const response = await axios.get(
-      "https://discussions-louis-bradley-blue.trycloudflare.com/api/categories",
+      "https://wellness-exclusion-surfing-advisory.trycloudflare.com/api/categories",
     );
     const data = response.data;
     console.log(data);
