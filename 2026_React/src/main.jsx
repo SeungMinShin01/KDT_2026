@@ -21,9 +21,9 @@ const create = createRoot(root);
 
 // [day04] Routes/Route 는 Router 컨텍스트 안에서만 동작하므로 BrowserRouter 로 감싼다.
 import { BrowserRouter } from "react-router-dom";
-import App3 from "./example/day04/practice/App";
+import App4 from "./example/day05/App";
 create.render(
   <BrowserRouter>
-    <App3></App3>
+    <App4></App4>
   </BrowserRouter>,
 );

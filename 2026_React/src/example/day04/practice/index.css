@@ -41,6 +41,8 @@
   background-color: rgb(71, 71, 235);
   margin: 10px;
   border-radius: 10px;
+  color: white;
+  font-weight: bold;
 }
 
 .Box {
