@@ -48,3 +48,14 @@
 .Box {
   margin: 0 auto;
 }
+
+.inputWrap {
+  display: flex;
+  flex-direction: column;
+}
+
+.inputWrap > input {
+  width: 500px;
+  padding: 5px;
+  margin-top: 10px;
+}
