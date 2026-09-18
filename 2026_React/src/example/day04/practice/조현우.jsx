@@ -6,7 +6,7 @@ function Content(props) {
   const [name, setName] = useState("");
   const addCategory = async () => {
     await axios.post(
-      "https://wellness-exclusion-surfing-advisory.trycloudflare.com/api/products",
+      "https://wellness-exclusion-surfing-advisory.trycloudflare.com/api/categories",
       { name },
     );
   };
