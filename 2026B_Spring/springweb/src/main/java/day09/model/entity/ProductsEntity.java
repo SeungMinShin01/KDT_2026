@@ -1,6 +1,6 @@
-package day10.model.entity;
+package day09.model.entity;
 
-import day10.model.entity.CategoryEntity;
+import day09.model.entity.CategoryEntity;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;

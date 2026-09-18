@@ -1,4 +1,4 @@
-package day10.controller;
+package day09.controller;
 
 import java.util.List;
 
@@ -12,8 +12,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import day10.model.dto.ReviewsDto;
-import day10.service.ReviewService;
+import day09.model.dto.ReviewsDto;
+import day09.service.ReviewService;
 
 @RestController
 @RequestMapping("/api/reviews")

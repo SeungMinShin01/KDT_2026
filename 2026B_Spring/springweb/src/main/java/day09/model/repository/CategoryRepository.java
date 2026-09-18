@@ -1,9 +1,9 @@
-package day10.model.repository;
+package day09.model.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import day10.model.entity.CategoryEntity;
+import day09.model.entity.CategoryEntity;
 
 @Repository
 public interface CategoryRepository extends JpaRepository<CategoryEntity, Integer> {

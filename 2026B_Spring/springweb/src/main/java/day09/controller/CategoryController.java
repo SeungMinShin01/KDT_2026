@@ -1,4 +1,4 @@
-package day10.controller;
+package day09.controller;
 
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,8 +11,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import day10.model.dto.CategoryDto;
-import day10.service.CategoryService;
+import day09.model.dto.CategoryDto;
+import day09.service.CategoryService;
 
 @RestController
 @RequestMapping("/api/categories")

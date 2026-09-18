@@ -1,4 +1,4 @@
-package day10.service;
+package day09.service;
 
 import java.util.List;
 import java.util.Optional;
@@ -6,9 +6,9 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import day10.model.dto.CategoryDto;
-import day10.model.entity.CategoryEntity;
-import day10.model.repository.CategoryRepository;
+import day09.model.dto.CategoryDto;
+import day09.model.entity.CategoryEntity;
+import day09.model.repository.CategoryRepository;
 
 @Service
 public class CategoryService {

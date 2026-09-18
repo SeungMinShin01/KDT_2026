@@ -75,10 +75,5 @@ public class exam4 {
  * 
  */
 
-class Student {
-    private String name;
-
-    public Student(String name) {
-        this.name = name;
-    }
-}
+// Student 클래스는 같은 패키지의 exam1.java 에 이미 있으므로 여기서 다시 선언하지 않는다.
+// (패키지가 같으면 파일이 달라도 같은 이름의 클래스는 하나만 존재할 수 있다)

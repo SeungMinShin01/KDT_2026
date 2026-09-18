@@ -1,4 +1,4 @@
-package day10.service;
+package day09.service;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -7,12 +7,12 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import day10.model.entity.CategoryEntity;
-import day10.model.dto.ProductResponseDto;
-import day10.model.entity.ProductsEntity;
-import day10.model.repository.CategoryRepository;
-import day10.model.repository.ProductsRepository;
-import day10.model.dto.ProductDto;
+import day09.model.dto.ProductDto;
+import day09.model.dto.ProductResponseDto;
+import day09.model.entity.CategoryEntity;
+import day09.model.entity.ProductsEntity;
+import day09.model.repository.CategoryRepository;
+import day09.model.repository.ProductsRepository;
 
 @Service
 public class ProductsService {

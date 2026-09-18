@@ -35,3 +35,7 @@ out/
 
 ### VS Code ###
 .vscode/
+
+### 설정/비밀정보 ###
+# DB 비밀번호, 공공데이터 API 서비스키가 들어있으므로 push 하지 않는다.
+src/main/resources/application.properties

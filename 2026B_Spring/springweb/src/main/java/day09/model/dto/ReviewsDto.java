@@ -1,7 +1,7 @@
-package day10.model.dto;
+package day09.model.dto;
 
-import day10.model.entity.ProductsEntity;
-import day10.model.entity.ReviewsEntity;
+import day09.model.entity.ProductsEntity;
+import day09.model.entity.ReviewsEntity;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;

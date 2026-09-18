@@ -1,9 +1,4 @@
-package day10.controller;
-
-import day10.model.dto.ProductDto;
-import day10.model.dto.ProductResponseDto;
-import day10.model.entity.ProductsEntity;
-import day10.service.ProductsService;
+package day09.controller;
 
 import java.util.List;
 
@@ -17,6 +12,11 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+
+import day09.model.dto.ProductDto;
+import day09.model.dto.ProductResponseDto;
+import day09.model.entity.ProductsEntity;
+import day09.service.ProductsService;
 
 @CrossOrigin(value = "http://localhost:5173")
 @RestController
