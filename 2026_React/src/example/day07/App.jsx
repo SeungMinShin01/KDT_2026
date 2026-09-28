@@ -1,0 +1,16 @@
+import { Route, Routes } from "react-router-dom";
+import NotFound from "./NotFound";
+import List from "./List";
+import Write from "./write";
+export default function App7(props) {
+  // Route path='*' = 와일드카드 (모든주소)
+  return (
+    <>
+      <Routes>
+        <Route path="*" element={<NotFound />} />
+        <Route path="/list" element={<List />} />
+        <Route path="/write" element={<Write />} />
+      </Routes>
+    </>
+  );
+}

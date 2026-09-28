@@ -63,7 +63,7 @@ function ProductPrint(props) {
     </>
   );
 }
-export default function Seung(props) {
+export default function Seung2(props) {
   return (
     <>
       <ProductPrint></ProductPrint>

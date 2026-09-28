@@ -1,5 +1,5 @@
 import { Route, Routes } from "react-router-dom";
-import Seung from "./신승민";
+import Seung from "./신승민2";
 import Home from "./Home";
 import 김지환 from "./김지환";
 import Hanwoo from "./조현우";

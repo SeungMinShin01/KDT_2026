@@ -28,8 +28,8 @@ function MoveBox(props) {
       console.log("useEffect 실행 --> 언마운트");
     };
     //});   // [1] 의존성 배열을 생략했을 때 : 1. 마운트 2. 업데이트 될때마다 실행
-    // }, []);   // [2] 의존성 배열 공백일 때    : 1.
-  }, [leftCount]);
+    // }, []);   // [2] 의존성 배열 공백일 때    : useEffect가 최초 한번만 실행되고, 이후에는 실행되지 않는다.
+  }, [leftCount]); // [3] 의존성 배열에 State 변수를 할당할 때 : leftCount 때마다 useEffect가 실행된다. 
   console.log("return 실행 --> 렌더링");
   return (
     <>
