@@ -6,3 +6,9 @@ INSERT INTO test(name, descri, price, create_date , update_date )
     ('환타', '맛있는 탄삼음료3', 1000, NOW(), NOW());
 
 
+
+
+ 	
+DROP DATABASE IF EXISTS mydb0928;
+CREATE DATABASE mydb0928;
+USE mydb0928;

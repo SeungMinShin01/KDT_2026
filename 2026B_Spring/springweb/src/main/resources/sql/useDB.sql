@@ -1,4 +1,10 @@
+-- Active: 1741606616899@@127.0.0.1@3306@mydb0813
 DROP DATABASE IF EXISTS totalpractice1;
 CREATE DATABASE IF NOT EXISTS totalpractice1;
 use totalpractice1;
 
+
+ 	
+DROP DATABASE IF EXISTS mydb1002;
+CREATE DATABASE mydb1002;
+USE mydb1002;

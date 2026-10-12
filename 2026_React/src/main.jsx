@@ -19,11 +19,55 @@ const create = createRoot(root);
 // import ProductManager from "./example/day02/practice2/ProductManager.jsx";
 // create.render(<ProductManager />);
 
-// [day04] Routes/Route 는 Router 컨텍스트 안에서만 동작하므로 BrowserRouter 로 감싼다.
+// [day04]
+// import { BrowserRouter } from "react-router-dom"; // 1. 라우터 라이브러리 가져오기
+// import App from "./example/day04/App";
+// // 2. 최초 렌더링 되는 컴포넌트 앞뒤로 라우터컴포넌트 감싼다.
+// create.render(
+//     <BrowserRouter>
+//         <App />
+//     </BrowserRouter>
+// )
+
+// import App from "./example/practice3/App";
+// create.render(
+//     <BrowserRouter>
+//         <App />
+//     </BrowserRouter>
+// )
+
+// [day05]
+// import App from "./example/day05/App";
+// import { BrowserRouter } from "react-router-dom";
+// create.render(
+//     <BrowserRouter> { /* 최초 렌더링 컴포넌트 감싼다.*/ }
+//         <App />
+//     </BrowserRouter>
+// )
+
+// day06
+// import App from "./example/day06/App";
+// create.render(
+//     <BrowserRouter> { /* 최초 렌더링 컴포넌트 감싼다.*/ }
+//         <App />
+//     </BrowserRouter>
+// )
+
+// day07
+// import { BrowserRouter } from "react-router-dom";
+// import App from "./example/day07/App";
+// create.render(<BrowserRouter><App/></BrowserRouter>)
+
+// day10
+// import { BrowserRouter } from "react-router-dom";
+// import App from "./example/day10/App";
+// create.render(<BrowserRouter><App/></BrowserRouter>)
+
+// day13
 import { BrowserRouter } from "react-router-dom";
-import App7 from "./example/day07/App";
+import App from "./example/day13/App";
 create.render(
   <BrowserRouter>
-    <App7></App7>
+    <App />
   </BrowserRouter>,
 );
