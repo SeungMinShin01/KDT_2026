@@ -42,25 +42,34 @@ dependencies {
 	implementation 'tools.jackson.dataformat:jackson-dataformat-xml'
   	testImplementation 'org.springframework.boot:spring-boot-starter-webflux-test'
   	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
-
+	// 6. CSV 파싱
 	implementation 'com.opencsv:opencsv:5.12.0'
 
+	// 7. 비크립트
 	implementation 'org.springframework.security:spring-security-crypto'
 
-	// 6. 레디스 연동
+	// 8. 레디스 연동
 	implementation 'org.springframework.boot:spring-boot-starter-data-redis'
 
-	// 7. JWT 토큰 (jjwt) : api 는 컴파일용, impl/jackson 은 실행시에만 필요
+	
+	// 9. JWT 토큰 (jjwt) : api 는 컴파일용, impl/jackson 은 실행시에만 필요
 	implementation 'io.jsonwebtoken:jjwt-api:0.12.6'
 	runtimeOnly 'io.jsonwebtoken:jjwt-impl:0.12.6'
 	runtimeOnly 'io.jsonwebtoken:jjwt-jackson:0.12.6'
 
-	// 8. Jackson 2 (com.fasterxml.jackson) : Spring Boot 4 기본은 Jackson 3(tools.jackson) 이라
+	// 10. Jackson 2 (com.fasterxml.jackson) : Spring Boot 4 기본은 Jackson 3(tools.jackson) 이라
 	//    수업에서 쓰는 com.fasterxml.jackson.databind.ObjectMapper 를 위해 따로 추가한다.
 	implementation 'com.fasterxml.jackson.core:jackson-databind'
 
-	// 9. 웹소켓 (STOMP 메시지 브로커 포함)
+	// 11. 웹소켓 (STOMP 메시지 브로커 포함)
 	implementation 'org.springframework.boot:spring-boot-starter-websocket'
+
+	// 12. 웹크롤링 
+	implementation 'org.jsoup:jsoup:1.23.2' // 정적페이지 용도 
+	implementation 'com.microsoft.playwright:playwright:1.63.0' // 동적페이지 용도
+
+	testImplementation 'org.springframework.boot:spring-boot-starter-webmvc-test'
+	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 }
 
 tasks.named('test') {
