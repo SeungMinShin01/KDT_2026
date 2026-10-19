@@ -24,7 +24,7 @@ public class BoardDto {
     private LocalDateTime updatedAt;
 
     @Builder.Default
-    private List<CommetDto> comments = new ArrayList<>();
+    private List<CommentDto> comments = new ArrayList<>();
 
     public BoardEntity toEntity() {
         return BoardEntity.builder()
