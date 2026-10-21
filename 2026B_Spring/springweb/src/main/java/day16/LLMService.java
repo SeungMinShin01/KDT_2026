@@ -46,7 +46,7 @@ public class LLMService {
                 .block();
         System.out.println(response);
         // 응답 자료에서 text속성값만 추출
-        JsonNode root = objectMapper.valueToTree(response); // MAP -> JSON
+        JsonNode root = objectMapper.valueToTree    (response); // MAP -> JSON
         JsonNode textNode = root.at("/candidates/0/content/parts/0/text"); // AI응답 본문 추출
         return textNode.asText(); // 응답자료내 AI응답 본문만 반환
 
