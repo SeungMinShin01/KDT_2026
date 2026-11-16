@@ -74,3 +74,36 @@ optimal_model = study.best_trial.user_attrs['best_n_estimators']
 print( '최적 트리: ', optimal_model )
 # 최적 하이퍼파라미터: {'learning_rate': 0.0655020265678206, 'num_leaves': 16, 'max_depth': 6, 'min_child_samples': 50, 'subsample': 0.9989859135407586, 'colsample_bytree': 0.9939374085734083}
 # 최적 트리:  174
+
+# 6) 최적 파라미터로 모델 학습 , 조기종료없이 최적으로
+final_model = LGBMRegressor(
+    random_state=42, verbose=-1, n_jobs=-1,
+    **study.best_params, # 최적 파라미터 포함 # **리스트 **딕셔너리 **전개연산자
+    n_estimators=optimal_model
+)
+final_model.fit(X_train, Y_train)
+print( 'train r2: ', final_model.score(X_train, Y_train))
+print('test r2: ', final_model.score(X_test, Y_test))
+print( final_model.feature_name_)
+print(final_model.feature_importances_)
+# train r2:  0.8019492459052838
+# test r2:  0.7205797276257827
+# ['year', 'mileage', 'brand', 'model', 'title_status', 'color', 'state']
+# [310 870 200 389  50 228 467]
+
+# 7) joblib 저장 / 로드 
+import joblib
+
+joblib.dump( final_model, './day18/gbm_model.pkl') # 1)
+model = joblib.load( './day18/gbm_model.pkl' ) # 다른 .py 파일 또는 메소드 가정
+# 8) 예측
+new_cars = pd.DataFrame([
+    {'year': 2019, 'mileage': 25000, 'brand': 'ford',   'model': 'f-150',  'title_status': 'clean vehicle',     'color': 'white', 'state': 'texas'},
+    {'year': 2014, 'mileage': 85000, 'brand': 'nissan', 'model': 'altima', 'title_status': 'salvage insurance', 'color': 'black', 'state': 'california'}
+])
+for col in cat_cols:
+    new_cars[col] = new_cars[col].astype('category')
+### 
+preds = model.predict( new_cars )
+print( '서빙 모델 예측 (1번차량) 가격: ' , preds[0] ) # 27983.4777071311
+print( '서빙 모델 예측 (2번차량) 가격: ', preds[1] ) # 635.4763331040908
