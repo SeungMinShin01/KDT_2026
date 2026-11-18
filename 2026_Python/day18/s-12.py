@@ -79,7 +79,7 @@ print( '최적 트리: ', optimal_model )
 final_model = LGBMRegressor(
     random_state=42, verbose=-1, n_jobs=-1,
     **study.best_params, # 최적 파라미터 포함 # **리스트 **딕셔너리 **전개연산자
-    n_estimators=optimal_model
+    n_estimators=optimal_model #최적의 모델 개수
 )
 final_model.fit(X_train, Y_train)
 print( 'train r2: ', final_model.score(X_train, Y_train))
