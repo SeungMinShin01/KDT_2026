@@ -35,7 +35,7 @@ plt.scatter(X_train_scaled[ : ,4 ],X_train_scaled[ : , 1 ],c=train_labels )
 plt.scatter(X_test_scaled[ : , 4 ],X_test_scaled[ : , 1 ] , c="red", marker='*')
 plt.show()
 
-# 4) 최적의 K(군집/그룹) 수 찾기 VS 지도핟습( F1 분류 / R2 회귀 )
+# 4) 최적의 K(군집/그룹) 수 찾기 VS 지도학습( F1 분류 / R2 회귀 )
 from sklearn.metrics import silhouette_score
 sse_list= [ ]
 sil_list= [ ]
